@@ -10,13 +10,13 @@ deepspeed_config:
   zero_stage: 2
   overlap_comm: true
   gradient_clip: 1
-distributed_type: DEEPSPEED
+distributed_type: No
 downcast_bf16: 'auto'
 machine_rank: 0
 main_training_function: main
 mixed_precision: 'bf16'
 num_machines: 1
-num_processes: 8
+num_processes: 1
 rdzv_backend: static
 same_network: true
 tpu_env: []

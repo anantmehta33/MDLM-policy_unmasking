@@ -1,16 +1,14 @@
 #!/bin/bash
-#SBATCH --output=slurm/%A/slurm.out
-#SBATCH --job-name=math-base
-#SBATCH --time=72:00:00
-#SBATCH --wait-all-nodes=1
-#SBATCH --open-mode=append
-
-#SBATCH --nodes=1
-#SBATCH --gres=gpu:8
-#SBATCH --qos=storygen_high
-#SBATCH --account=storygen
+#SBATCH --job-name=try
+#SBATCH --time=1:00:00
+#SBATCH --ntasks=1 
+#SBATCH --ntasks-per-node=1  
 #SBATCH --cpus-per-task=50
-
+#SBATCH --mem=120G       
+#SBATCH --output=/work/nvme/bdgk/anant/d1/%x_%j.log  
+#SBATCH --gres=gpu:1
+#SBATCH --partition=gpuH200x8-interactive
+#SBATCH --account=bcjx-delta-gpu
 
 
 export LOGDIR=checkpoints/slurm/${SLURM_JOB_ID}
@@ -20,8 +18,9 @@ echo $LOGDIR
 
 DATASET="math"
 RUN_NAME=${DATASET}_base_bs12
-MODEL_PATH=LLaDA-8B-Instruct 
+MODEL_PATH=GSAI-ML/LLaDA-1.5 
 NUM_ITER=12
+
 srun --output ${LOGDIR}/grpo_%j.out \
     accelerate launch \
         --config_file ./accelerate_a100.yaml \

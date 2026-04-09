@@ -21,7 +21,7 @@ from trl.trainer.utils import (
     print_prompt_completions_sample,
     selective_log_softmax,
 )
-import wandb
+#import wandb
 import os
 
 if is_peft_available():
@@ -589,18 +589,18 @@ class DiffuGRPOTrainer(GRPOTrainer):
                         rewards_to_log,
                         self.state.global_step,
                     )
-                if self.args.report_to and "wandb" in self.args.report_to and wandb.run is not None:
-                    import pandas as pd
+                # if self.args.report_to and "wandb" in self.args.report_to and wandb.run is not None:
+                #     import pandas as pd
 
-                    # For logging
-                    table = {
-                        "step": [str(self.state.global_step)] * len(rewards),
-                        "prompt": prompts_to_log,
-                        "completion": completions_to_log,
-                        "reward": rewards.tolist(),
-                    }
-                    df = pd.DataFrame(table)
-                    wandb.log({"completions": wandb.Table(dataframe=df)})
+                #     # For logging
+                #     table = {
+                #         "step": [str(self.state.global_step)] * len(rewards),
+                #         "prompt": prompts_to_log,
+                #         "completion": completions_to_log,
+                #         "reward": rewards.tolist(),
+                #     }
+                #     df = pd.DataFrame(table)
+                #     wandb.log({"completions": wandb.Table(dataframe=df)})
 
         return {
             "prompt_ids": prompt_ids,

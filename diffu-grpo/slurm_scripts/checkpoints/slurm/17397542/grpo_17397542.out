@@ -1,0 +1,256 @@
+[2026-04-07 22:00:53,940] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W0407 22:00:56.714000 3604386 site-packages/torch/distributed/run.py:792] 
+W0407 22:00:56.714000 3604386 site-packages/torch/distributed/run.py:792] *****************************************
+W0407 22:00:56.714000 3604386 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0407 22:00:56.714000 3604386 site-packages/torch/distributed/run.py:792] *****************************************
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 9, in <module>
+    from diffu_grpo_trainer import DiffuGRPOTrainer
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+    from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+    from diffu_grpo_trainer import DiffuGRPOTrainer
+      File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+from diffu_grpo_trainer import DiffuGRPOTrainer
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+    from diffu_grpo_trainer import DiffuGRPOTrainer
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+            from diffu_grpo_trainer import DiffuGRPOTrainerfrom diffu_grpo_trainer import DiffuGRPOTrainerfrom diffu_grpo_trainer import DiffuGRPOTrainer
+
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+    from diffu_grpo_trainer import DiffuGRPOTrainer
+  File "/work/nvme/bdgk/anant/d1/diffu-grpo/diffu_grpo_trainer.py", line 2, in <module>
+    from ..extras.profiling import profiling_context, profiling_decorator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+    from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+    from trl.trainer.grpo_trainer import GRPOTrainer
+      File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+        from trl.trainer.grpo_trainer import GRPOTrainer
+from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+    from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+    from trl.trainer.grpo_trainer import GRPOTrainer
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/trainer/grpo_trainer.py", line 49, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    from ..extras.profiling import profiling_context, profiling_decorator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+    from ..extras.profiling import profiling_context, profiling_decorator
+    from ..extras.profiling import profiling_context, profiling_decorator      File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+
+from ..extras.profiling import profiling_context, profiling_decorator        
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+from ..extras.profiling import profiling_context, profiling_decoratorfrom ..extras.profiling import profiling_context, profiling_decorator
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+    from ..extras.profiling import profiling_context, profiling_decorator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/trl/extras/profiling.py", line 24, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+    import wandb    
+import wandb
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/__init__.py", line 26, in <module>
+        from wandb import sdk as wandb_sdkfrom wandb import sdk as wandb_sdk
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+        from wandb import sdk as wandb_sdkfrom wandb import sdk as wandb_sdk    
+from wandb import sdk as wandb_sdk    
+
+      File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+from wandb import sdk as wandb_sdkfrom wandb import sdk as wandb_sdk
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+    from wandb import sdk as wandb_sdk
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/__init__.py", line 5, in <module>
+                        from .wandb_artifacts import Artifact  # noqa: F401    from .wandb_artifacts import Artifact  # noqa: F401from .wandb_artifacts import Artifact  # noqa: F401from .wandb_artifacts import Artifact  # noqa: F401from .wandb_artifacts import Artifact  # noqa: F401from .wandb_artifacts import Artifact  # noqa: F401
+from .wandb_artifacts import Artifact  # noqa: F401
+
+
+
+
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+    from .wandb_artifacts import Artifact  # noqa: F401
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/sdk/wandb_artifacts.py", line 33, in <module>
+                            from wandb.apis import InternalApi, PublicApifrom wandb.apis import InternalApi, PublicApifrom wandb.apis import InternalApi, PublicApi    from wandb.apis import InternalApi, PublicApifrom wandb.apis import InternalApi, PublicApifrom wandb.apis import InternalApi, PublicApifrom wandb.apis import InternalApi, PublicApi
+
+
+
+
+from wandb.apis import InternalApi, PublicApi
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/__init__.py", line 43, in <module>
+    from .public import Api as PublicApi  # noqa
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+    from .public import Api as PublicApi  # noqa
+            from .public import Api as PublicApi  # noqa      File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+from .public import Api as PublicApi  # noqa        from .public import Api as PublicApi  # noqa
+from .public import Api as PublicApi  # noqa
+from .public import Api as PublicApi  # noqafrom .public import Api as PublicApi  # noqa
+
+
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3105, in <module>
+                            class PythonMongoishQueryGenerator:class PythonMongoishQueryGenerator:class PythonMongoishQueryGenerator:class PythonMongoishQueryGenerator:class PythonMongoishQueryGenerator:class PythonMongoishQueryGenerator:
+class PythonMongoishQueryGenerator:
+
+
+
+
+
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+    class PythonMongoishQueryGenerator:
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/wandb/apis/public.py", line 3106, in PythonMongoishQueryGenerator
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'        
+    from pkg_resources import parse_versionfrom pkg_resources import parse_versionfrom pkg_resources import parse_version
+
+
+ModuleNotFoundErrorModuleNotFoundErrorModuleNotFoundError: : No module named 'pkg_resources': No module named 'pkg_resources'
+
+No module named 'pkg_resources'
+    from pkg_resources import parse_version
+    from pkg_resources import parse_versionModuleNotFoundError
+: No module named 'pkg_resources'
+ModuleNotFoundError: No module named 'pkg_resources'    
+from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+    from pkg_resources import parse_version
+ModuleNotFoundError: No module named 'pkg_resources'
+W0407 22:01:06.251000 3604386 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3604512 closing signal SIGTERM
+E0407 22:01:06.316000 3604386 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 3604507) of binary: /u/amehta4/miniconda3/envs/d1/bin/python
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Traceback (most recent call last):
+  File "/u/amehta4/miniconda3/envs/d1/bin/accelerate", line 6, in <module>
+    sys.exit(main())
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1182, in launch_command
+    deepspeed_launcher(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 861, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+../diffu_grpo_train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3604508)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 3604509)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 3604510)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 3604511)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 3604513)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 3604514)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-07_22:01:06
+  host      : gpua001.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3604507)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

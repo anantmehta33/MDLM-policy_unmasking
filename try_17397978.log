@@ -1,0 +1,2 @@
+checkpoints/slurm/17397978
+srun: error: gpua091: task 0: Exited with exit code 1

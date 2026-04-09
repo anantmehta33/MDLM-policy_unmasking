@@ -1,0 +1,539 @@
+[2026-04-07 22:11:44,452] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+W0407 22:11:47.507000 1966018 site-packages/torch/distributed/run.py:792] 
+W0407 22:11:47.507000 1966018 site-packages/torch/distributed/run.py:792] *****************************************
+W0407 22:11:47.507000 1966018 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0407 22:11:47.507000 1966018 site-packages/torch/distributed/run.py:792] *****************************************
+[2026-04-07 22:11:56,301] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,319] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,327] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,330] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,336] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,343] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,350] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-07 22:11:56,354] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2026-04-07 22:11:57,995] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,995] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,995] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-04-07 22:11:57,996] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,996] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,997] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,997] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:57,998] [INFO] [comm.py:658:init_distributed] cdb=None
+[2026-04-07 22:11:58,044] [INFO] [comm.py:658:init_distributed] cdb=None
+Generating train split:   0%|          | 0/7500 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7500/7500 [00:00<00:00, 101656.77 examples/s]
+Generating test split:   0%|          | 0/500 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 500/500 [00:00<00:00, 51180.01 examples/s]
+Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:  30%|██▉       | 2223/7500 [00:00<00:00, 20741.94 examples/s]Map:  31%|███       | 2294/7500 [00:00<00:00, 21480.25 examples/s]Map:  30%|███       | 2286/7500 [00:00<00:00, 20936.44 examples/s]Map:  31%|███       | 2297/7500 [00:00<00:00, 22288.14 examples/s]Map:  31%|███       | 2312/7500 [00:00<00:00, 22372.72 examples/s]Map:   0%|          | 0/7500 [00:00<?, ? examples/s]Map:  34%|███▎      | 2526/7500 [00:00<00:00, 25127.21 examples/s]Map:  33%|███▎      | 2483/7500 [00:00<00:00, 24689.28 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 24516.99 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 24412.24 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 23737.52 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 24139.48 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 23817.58 examples/s]Map:  32%|███▏      | 2400/7500 [00:00<00:00, 23324.37 examples/s]Map:  68%|██████▊   | 5076/7500 [00:00<00:00, 25341.18 examples/s]Map:  67%|██████▋   | 5004/7500 [00:00<00:00, 24993.41 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 23743.26 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 23608.77 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 23385.63 examples/s]Map:  67%|██████▋   | 5000/7500 [00:00<00:00, 23916.62 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 22733.60 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 21904.38 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 21942.83 examples/s]
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 21522.17 examples/s]
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 21141.30 examples/s]
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 22631.20 examples/s]
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 22207.88 examples/s]
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 18779.31 examples/s]Map: 100%|██████████| 7500/7500 [00:00<00:00, 9281.57 examples/s] 
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 9352.29 examples/s] 
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank1]:     raise head_call_error
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank1]:     r = _request_wrapper(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank1]:     response = _request_wrapper(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank1]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank1]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c780-0ed7bdea4239747036b17a99;1f9ab90c-ef3e-4d7b-a2f7-8122ab1872ae)
+
+[rank1]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank1]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank1]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank1]: Invalid username or password.
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank1]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank1]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank1]:     model = AutoModel.from_pretrained(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank1]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank5]:     response.raise_for_status()
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank5]:     raise HTTPError(http_error_msg, response=self)
+[rank5]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank5]: The above exception was the direct cause of the following exception:
+
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank5]:     resolved_file = hf_hub_download(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank5]:     return fn(*args, **kwargs)
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank5]:     return _hf_hub_download_to_cache_dir(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank5]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank5]:     raise head_call_error
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank5]:     metadata = get_hf_file_metadata(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank5]:     return fn(*args, **kwargs)
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank5]:     r = _request_wrapper(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank5]:     response = _request_wrapper(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank5]:     hf_raise_for_status(response)
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank5]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank5]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c780-3f066436491e62d73bfe5d47;3e824a3c-a562-464d-b5ee-f26ecf0229e0)
+
+[rank5]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank5]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank5]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank5]: Invalid username or password.
+
+[rank5]: The above exception was the direct cause of the following exception:
+
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank5]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank5]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank5]:     model = AutoModel.from_pretrained(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank5]:     resolved_config_file = cached_file(
+[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank5]:     raise EnvironmentError(
+[rank5]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank5]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank7]:     response.raise_for_status()
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank7]:     raise HTTPError(http_error_msg, response=self)
+[rank7]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank7]: The above exception was the direct cause of the following exception:
+
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank7]:     resolved_file = hf_hub_download(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank7]:     return fn(*args, **kwargs)
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank7]:     return _hf_hub_download_to_cache_dir(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank7]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank7]:     raise head_call_error
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank7]:     metadata = get_hf_file_metadata(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank7]:     return fn(*args, **kwargs)
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank7]:     r = _request_wrapper(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank7]:     response = _request_wrapper(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank7]:     hf_raise_for_status(response)
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank7]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank7]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c780-497616c92c055c1104bac692;6e6dd48b-3889-4a05-8123-96288229c1f0)
+
+[rank7]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank7]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank7]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank7]: Invalid username or password.
+
+[rank7]: The above exception was the direct cause of the following exception:
+
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank7]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank7]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank7]:     model = AutoModel.from_pretrained(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank7]:     resolved_config_file = cached_file(
+[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank7]:     raise EnvironmentError(
+[rank7]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank7]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank4]:     response.raise_for_status()
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank4]:     raise HTTPError(http_error_msg, response=self)
+[rank4]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank4]: The above exception was the direct cause of the following exception:
+
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank4]:     resolved_file = hf_hub_download(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank4]:     return fn(*args, **kwargs)
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank4]:     return _hf_hub_download_to_cache_dir(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank4]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank4]:     raise head_call_error
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank4]:     metadata = get_hf_file_metadata(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank4]:     return fn(*args, **kwargs)
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank4]:     r = _request_wrapper(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank4]:     response = _request_wrapper(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank4]:     hf_raise_for_status(response)
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank4]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank4]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c780-0a2f9231233e5d0318b70194;78222b5d-a368-486e-8d34-f5a19baa681c)
+
+[rank4]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank4]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank4]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank4]: Invalid username or password.
+
+[rank4]: The above exception was the direct cause of the following exception:
+
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank4]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank4]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank4]:     model = AutoModel.from_pretrained(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank4]:     resolved_config_file = cached_file(
+[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank4]:     raise EnvironmentError(
+[rank4]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank4]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank6]:     response.raise_for_status()
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank6]:     raise HTTPError(http_error_msg, response=self)
+[rank6]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank6]: The above exception was the direct cause of the following exception:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank6]:     resolved_file = hf_hub_download(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank6]:     return fn(*args, **kwargs)
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank6]:     return _hf_hub_download_to_cache_dir(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank6]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank6]:     raise head_call_error
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank6]:     metadata = get_hf_file_metadata(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank6]:     return fn(*args, **kwargs)
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank6]:     r = _request_wrapper(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank6]:     response = _request_wrapper(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank6]:     hf_raise_for_status(response)
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank6]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank6]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c780-2e4257f675f89d973e9a8698;e97a1ea9-8786-4060-8369-3f3f9caaeb9d)
+
+[rank6]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank6]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank6]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank6]: Invalid username or password.
+
+[rank6]: The above exception was the direct cause of the following exception:
+
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank6]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank6]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank6]:     model = AutoModel.from_pretrained(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank6]:     resolved_config_file = cached_file(
+[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank6]:     raise EnvironmentError(
+[rank6]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank6]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank0]:     raise head_call_error
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank0]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank0]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c781-7335abe523f09c937ef18505;fad1dbbb-6afe-4268-a034-6f8a66e321cf)
+
+[rank0]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank0]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank0]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank0]: Invalid username or password.
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank0]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank0]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank0]:     model = AutoModel.from_pretrained(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank0]:     raise EnvironmentError(
+[rank0]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank0]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank2]:     response.raise_for_status()
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank2]:     raise HTTPError(http_error_msg, response=self)
+[rank2]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank2]:     resolved_file = hf_hub_download(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank2]:     return _hf_hub_download_to_cache_dir(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank2]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank2]:     raise head_call_error
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank2]:     metadata = get_hf_file_metadata(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank2]:     r = _request_wrapper(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank2]:     response = _request_wrapper(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank2]:     hf_raise_for_status(response)
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank2]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank2]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c781-6d6367965f8d5d3a2738be65;a2001b8a-5f69-443a-a276-71df46462334)
+
+[rank2]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank2]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank2]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank2]: Invalid username or password.
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank2]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank2]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank2]:     model = AutoModel.from_pretrained(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank2]:     resolved_config_file = cached_file(
+[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank2]:     raise EnvironmentError(
+[rank2]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank2]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+Map: 100%|██████████| 7500/7500 [00:00<00:00, 9469.93 examples/s] 
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+[rank3]:     response.raise_for_status()
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/requests/models.py", line 1028, in raise_for_status
+[rank3]:     raise HTTPError(http_error_msg, response=self)
+[rank3]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank3]:     resolved_file = hf_hub_download(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+[rank3]:     return _hf_hub_download_to_cache_dir(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1121, in _hf_hub_download_to_cache_dir
+[rank3]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1662, in _raise_on_head_call_error
+[rank3]:     raise head_call_error
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1550, in _get_metadata_or_catch_error
+[rank3]:     metadata = get_hf_file_metadata(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1467, in get_hf_file_metadata
+[rank3]:     r = _request_wrapper(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 283, in _request_wrapper
+[rank3]:     response = _request_wrapper(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 307, in _request_wrapper
+[rank3]:     hf_raise_for_status(response)
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+[rank3]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank3]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-69d5c781-7623782b15e22df9749e988e;49543dd4-aea3-4a79-bc8c-54d6f38d5836)
+
+[rank3]: Repository Not Found for url: https://huggingface.co/LLaDA-8B-Instruct/resolve/main/config.json.
+[rank3]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank3]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank3]: Invalid username or password.
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
+[rank3]:     main(grpo_config=grpo_config, model_config=model_config)
+[rank3]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
+[rank3]:     model = AutoModel.from_pretrained(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank3]:     resolved_config_file = cached_file(
+[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank3]:     raise EnvironmentError(
+[rank3]: OSError: LLaDA-8B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank3]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank0]:[W407 22:12:01.346911453 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank6]:[W407 22:12:01.437224879 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank5]:[W407 22:12:01.533100952 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W407 22:12:02.762543121 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W407 22:12:02.780613761 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank4]:[W407 22:12:02.784536914 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W407 22:12:02.797629524 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank7]:[W407 22:12:02.895344955 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0407 22:12:02.756000 1966018 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1966207 closing signal SIGTERM
+E0407 22:12:02.821000 1966018 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1966199) of binary: /u/amehta4/miniconda3/envs/d1/bin/python
+Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Traceback (most recent call last):
+  File "/u/amehta4/miniconda3/envs/d1/bin/accelerate", line 6, in <module>
+    sys.exit(main())
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1182, in launch_command
+    deepspeed_launcher(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 861, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+../diffu_grpo_train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1966200)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1966202)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1966203)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 1966204)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 1966205)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 1966206)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-07_22:12:02
+  host      : gpua091.delta.ncsa.illinois.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1966199)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

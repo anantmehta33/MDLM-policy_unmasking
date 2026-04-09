@@ -1,0 +1,1 @@
+{"profiling/Time taken: DiffuGRPOTrainer.correctness_reward_func_math": 0.0008615031838417053, "_timestamp": 1775620712.4882245, "_runtime": 51.66096758842468, "_step": 2, "profiling/Time taken: DiffuGRPOTrainer.boxed_and_answer_tags_format_reward": 9.594950824975967e-05, "profiling/Time taken: DiffuGRPOTrainer.compute_loss": 0.27787224389612675, "_wandb": {"runtime": 52}}
