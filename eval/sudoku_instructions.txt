@@ -1,0 +1,57 @@
+
+
+### Phase 1: Environment Setup & State Engineering
+To give your Policy Network the best chance of learning, it needs a rich representation of the current diffusion step. For a 16-token sequence, construct the state S_t at step t by concatenating the following features for each token i:
+
+1. Current Token State (Categorical): The actual token ID (1, 2, 3, 4) or a special <MASK> token. You will pass this through a small embedding layer.
+2. LLaDA Confidence Logits (Continuous): Don't pass the full vocabulary logits (which is massive). Extract only the normalized probabilities for the 4 valid Sudoku numbers: [P(1), P(2), P(3), P(4)].
+3. Token Entropy (Continuous): Calculate the Shannon entropy of LLaDA's distribution over the vocabulary for that token. High entropy means LLaDA is guessing; low entropy means it is confident.
+4. Timestep Embedding (Continuous): Provide t/T (current step / total diffusion steps). This is crucial. The policy *must* know if it is at the beginning (where it needs to mask a lot) or the end (where it should mask very little).
+
+Shape of State Input: A matrix of size (16, D_features).
+
+### Phase 2: Policy Network (Actor) Architecture
+Because Sudoku requires understanding spatial relationships (rows, columns, 2x2 grids), treating each token completely independently in the policy network will fail. The network needs cross-token context.
+
+1. Architecture: Use a lightweight Transformer Encoder (2 layers, 4 attention heads) or a basic MLP-Mixer. This allows the network to look at the confidence of token i while also attending to the confidence of token j in the same row.
+2. Output Head: After the Transformer layers, pass the hidden states through a linear layer mapping from D_hidden -> 1. 
+3. Activation: Apply a Sigmoid activation.
+4. Final Output: A vector p_t in [0, 1]^16, representing the probability of *keeping* each of the 16 tokens unmasked.
+
+### Phase 3: The 4x4 Dense Reward Function
+At every step t, use `argmax` on LLaDA's logits to get the fully unmasked board X_hat_0^(t). Your static Python evaluator will calculate the board's "Error Score" based on 4x4 rules.
+
+The Error Score function:
+* Count the number of duplicates in all 4 rows.
+* Count the number of duplicates in all 4 columns.
+* Count the number of duplicates in all 4 of the 2x2 subgrids.
+* Sum these duplicates. A perfect board has an Error Score of 0.
+
+The Step-Wise Delta Reward (r_t):
+r_t = Error Score(X_hat_0^(t-1)) - Error Score(X_hat_0^(t))
+* *Note the inversion:* If the error score *decreased* from the previous step, the policy gets a positive reward. If the board got worse, it gets a negative reward.
+
+### Phase 4: The RL Training Loop (REINFORCE)
+Because the episode length is relatively short (e.g., 16 to 32 diffusion steps) and the reward is dense, you can start with a standard REINFORCE algorithm with a baseline before graduating to PPO.
+
+Here is the exact step-by-step execution for a single training trajectory:
+
+1. Initialize: Load a 4x4 Sudoku puzzle. Mask all non-given tokens. Let G be the binary mask of given clues (1 if given, 0 if empty).
+2. Unroll the Diffusion Steps (For t = 1 ... T):
+    * Pass the current masked board to frozen LLaDA 8b. Extract the logits.
+    * Construct the state S_t (Embeddings + Probabilities + Entropy + Timestep).
+    * Pass S_t to your Policy Network to get p_t (probabilities to keep).
+    * Crucial Masking Override: Force p_t[G == 1] = 1.0. The policy is *never* allowed to remask the puzzle's starting clues.
+    * Sample Actions: Sample a_t ~ Bernoulli(p_t).
+    * Record the log probability of the actions taken: sum(log(pi_theta(a_t | S_t))).
+    * Apply a_t to the `argmax` predictions to create the new masked sequence for step t+1.
+    * Calculate the dense reward r_t using your static Sudoku function. Store the reward.
+3. Compute Returns: At the end of step T, calculate the discounted return R_t for each step using a discount factor gamma (e.g., 0.99).
+    R_t = sum_{k=0}^{T-t} gamma^k * r_{t+k}
+4. Gradient Update: Calculate the policy loss:
+    L = - sum_{t} log(pi_theta(a_t | S_t)) * (R_t - b)
+    *(Where b is a baseline, like the moving average of returns, to reduce variance).*
+5. Backpropagate through the Policy Network and update the weights using an optimizer like AdamW.
+
+### Execution Tip: Schedule Replacement
+By doing this, you are completely discarding LLaDA's default linear/cosine masking schedule. The policy network is organically learning both *which* tokens to mask and *how many* tokens to mask at any given timestep purely through trial and error driven by the Sudoku constraints.

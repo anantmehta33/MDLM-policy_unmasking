@@ -1,0 +1,6 @@
+LOGDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku/slurm/18330701
+WORKDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku
+ACCEL_CONFIG=/scratch/user/ajayjagan2511/d1/diffu-grpo/accelerate.yaml
+NUM_GPUS=1
+PYTHON=/scratch/user/ajayjagan2511/miniconda3/envs/d1/bin/python
+srun: error: g068: task 0: Exited with exit code 1
