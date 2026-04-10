@@ -1,8 +1,11 @@
 import argparse
+import csv
 import json
 import math
 import os
 import random
+import re
+import sys
 import time
 
 import numpy as np
@@ -20,6 +23,7 @@ from countdown import CTDDataset
 from sudoku import SudokuDataset
 from human_eval import HumanEvalDataset
 from mbpp import MBPPDataset
+from parsers import Parser
 
 
 DATASET_MAP = {
@@ -61,6 +65,7 @@ def evaluate(
     cfg_scale=0.0,
     steps=64,
     block_length=32,
+    remasking_strategy="low_confidence",
 ):
     model.eval()
     total_processed = torch.tensor(0, device=model.device)
@@ -84,7 +89,7 @@ def evaluate(
             block_length=block_length,
             temperature=temperature,
             cfg_scale=cfg_scale,
-            remasking="low_confidence",
+            remasking=remasking_strategy,
         )
 
         generated_texts = tokenizer.batch_decode(out[:, -gen_length:], skip_special_tokens=False)
@@ -118,6 +123,153 @@ def evaluate(
         "total_processed": total_processed.item(),
     }
     return metrics
+
+
+def _single_token_id(tokenizer, text):
+    ids = tokenizer.encode(text, add_special_tokens=False)
+    if len(ids) != 1:
+        raise ValueError(f"Expected single token for {text!r}, got {ids}")
+    return ids[0]
+
+
+def _load_sudoku_policy(checkpoint_path, device):
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    if repo_root not in sys.path:
+        sys.path.insert(0, repo_root)
+
+    from policy_training.train_policy_sudoku import PolicyConfig, SudokuPolicyNetwork
+
+    ckpt = torch.load(checkpoint_path, map_location=device)
+    cfg = PolicyConfig(**ckpt["policy_config"])
+    policy_model = SudokuPolicyNetwork(cfg).to(device)
+    policy_model.load_state_dict(ckpt["policy_state_dict"])
+    policy_model.eval()
+    return policy_model
+
+
+def evaluate_sudoku_policy_csv(
+    model,
+    tokenizer,
+    policy_checkpoint_path,
+    csv_path,
+    steps,
+    batch_size,
+    temperature=0.0,
+    cfg_scale=0.0,
+    sample_actions=False,
+):
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(f"Sudoku CSV not found: {csv_path}")
+
+    device = model.device
+    mask_id = getattr(model.config, "mask_token_id", None)
+    if mask_id is None:
+        mask_id = tokenizer.mask_token_id
+    if mask_id is None:
+        mask_id = 126336
+
+    digit_token_ids = [_single_token_id(tokenizer, str(d)) for d in (1, 2, 3, 4)]
+    token_to_digit = {tok: idx + 1 for idx, tok in enumerate(digit_token_ids)}
+
+    policy_model = _load_sudoku_policy(policy_checkpoint_path, device)
+
+    rows = []
+    with open(csv_path, "r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            puzzle = row["Puzzle"].strip()
+            solution = row["Solution"].strip()
+            if len(puzzle) == 16 and len(solution) == 16:
+                rows.append((puzzle, solution))
+
+    if not rows:
+        raise RuntimeError(f"No valid rows in {csv_path}")
+
+    world_size = dist.get_world_size()
+    rank = dist.get_rank()
+    local_rows = [rows[i] for i in range(rank, len(rows), world_size)]
+
+    local_exact = 0
+    local_total = 0
+    local_empty_correct = 0
+    local_empty_total = 0
+    local_records = []
+
+    for bstart in range(0, len(local_rows), batch_size):
+        batch_rows = local_rows[bstart : bstart + batch_size]
+        bsz = len(batch_rows)
+
+        init_gen_ids = torch.full((bsz, 16), mask_id, dtype=torch.long, device=device)
+        given_mask = torch.zeros((bsz, 16), dtype=torch.long, device=device)
+
+        for bi, (puzzle, _) in enumerate(batch_rows):
+            for j, ch in enumerate(puzzle):
+                if ch != "0":
+                    d = int(ch)
+                    init_gen_ids[bi, j] = digit_token_ids[d - 1]
+                    given_mask[bi, j] = 1
+
+        prompt = torch.empty((bsz, 0), dtype=torch.long, device=device)
+
+        out = generate(
+            model,
+            prompt,
+            tokenizer,
+            steps=steps,
+            gen_length=16,
+            block_length=16,
+            temperature=temperature,
+            cfg_scale=cfg_scale,
+            remasking="policy",
+            mask_id=mask_id,
+            init_gen_ids=init_gen_ids,
+            policy_model=policy_model,
+            policy_digit_token_ids=digit_token_ids,
+            policy_given_mask=given_mask,
+            policy_sample_actions=sample_actions,
+        )
+
+        preds = out[:, :16].detach().cpu().tolist()
+        for bi, (puzzle, solution) in enumerate(batch_rows):
+            pred_digits = []
+            for tok in preds[bi]:
+                pred_digits.append(str(token_to_digit.get(tok, 0)))
+            pred_str = "".join(pred_digits)
+
+            exact = int(pred_str == solution)
+            local_exact += exact
+            local_total += 1
+
+            empty_idx = [k for k, ch in enumerate(puzzle) if ch == "0"]
+            local_empty_total += len(empty_idx)
+            local_empty_correct += sum(1 for k in empty_idx if pred_str[k] == solution[k])
+
+            if rank == 0:
+                local_records.append(
+                    {
+                        "question": f"Solve the following Sudoku puzzle: {puzzle}",
+                        "prompt_input": puzzle,
+                        "generations": pred_str,
+                        "ground_truth": solution,
+                    }
+                )
+
+    stat = torch.tensor(
+        [local_exact, local_total, local_empty_correct, local_empty_total],
+        dtype=torch.float64,
+        device=device,
+    )
+    dist.all_reduce(stat, op=dist.ReduceOp.SUM)
+    exact_correct, total, empty_correct, empty_total = stat.tolist()
+
+    metrics = {
+        "exact_match_acc": (exact_correct / total) if total else 0.0,
+        "empty_cell_acc": (empty_correct / empty_total) if empty_total else 0.0,
+        "total_processed": int(total),
+        "exact_correct": int(exact_correct),
+    }
+
+    return {"metrics": metrics, "generations": local_records}
 
 
 class CustomDistributedSampler(DistributedSampler):
@@ -199,6 +351,10 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", type=str, default="results/")
     parser.add_argument("--dont_use_box", action="store_true")
     parser.add_argument("--toy_evaluation", action="store_true")
+    parser.add_argument("--sudoku_csv", type=str, default="")
+    parser.add_argument("--policy_checkpoint_path", type=str, default="")
+    parser.add_argument("--remasking_strategy", type=str, default="low_confidence")
+    parser.add_argument("--policy_sample_actions", action="store_true")
     args = parser.parse_args()
 
     args.diffusion_steps = args.gen_length // 2
@@ -221,20 +377,25 @@ if __name__ == "__main__":
                 dist.broadcast(param.data, src=0)
             print(f"Rank {local_rank}: Parameters synchronized")
 
-    dataset = DATASET_MAP[args.dataset](
-        tokenizer,
-        subsample=num_evals[args.dataset],
-        num_examples=args.few_shot,
-        add_reasoning=True,  # prefill for all models
-        toy_evaluation=args.toy_evaluation,
+    direct_sudoku_policy_eval = (
+        args.dataset == "sudoku" and len(args.policy_checkpoint_path) > 0 and len(args.sudoku_csv) > 0
     )
 
-    dataloader = DataLoader(
-        dataset,
-        batch_size=args.batch_size,
-        sampler=CustomDistributedSampler(dataset, shuffle=False),
-        collate_fn=dataset.collate_fn,
-    )
+    if not direct_sudoku_policy_eval:
+        dataset = DATASET_MAP[args.dataset](
+            tokenizer,
+            subsample=num_evals[args.dataset],
+            num_examples=args.few_shot,
+            add_reasoning=True,  # prefill for all models
+            toy_evaluation=args.toy_evaluation,
+        )
+
+        dataloader = DataLoader(
+            dataset,
+            batch_size=args.batch_size,
+            sampler=CustomDistributedSampler(dataset, shuffle=False),
+            collate_fn=dataset.collate_fn,
+        )
 
     if len(args.checkpoint_path):
         model_name = args.checkpoint_path.split("/")
@@ -252,16 +413,43 @@ if __name__ == "__main__":
     filename = f"{args.output_dir}/{args.dataset}_{model_name}_{args.gen_length}_{args.diffusion_steps}_{dist.get_rank()}_generations.json"
     print(f"Saving generations to {filename}")
 
-    metrics = evaluate(
-        model,
-        tokenizer,
-        dataloader,
-        gen_length=args.gen_length,
-        block_length=args.block_length,
-        steps=args.diffusion_steps,
-    )
+    if direct_sudoku_policy_eval:
+        policy_result = evaluate_sudoku_policy_csv(
+            model=model,
+            tokenizer=tokenizer,
+            policy_checkpoint_path=args.policy_checkpoint_path,
+            csv_path=args.sudoku_csv,
+            steps=args.diffusion_steps,
+            batch_size=args.batch_size,
+            sample_actions=args.policy_sample_actions,
+        )
+        metrics = {
+            "wall_time": 0.0,
+            "total_processed": policy_result["metrics"]["total_processed"],
+            "exact_match_acc": policy_result["metrics"]["exact_match_acc"],
+            "empty_cell_acc": policy_result["metrics"]["empty_cell_acc"],
+            "exact_correct": policy_result["metrics"]["exact_correct"],
+            "generations": policy_result["generations"],
+        }
 
-    if not args.dont_save:
+        if dist.get_rank() == 0:
+            print(
+                f"[Sudoku Policy Eval] exact_match_acc={metrics['exact_match_acc']:.4f} "
+                f"empty_cell_acc={metrics['empty_cell_acc']:.4f} "
+                f"processed={metrics['total_processed']}"
+            )
+    else:
+        metrics = evaluate(
+            model,
+            tokenizer,
+            dataloader,
+            gen_length=args.gen_length,
+            block_length=args.block_length,
+            steps=args.diffusion_steps,
+            remasking_strategy=args.remasking_strategy,
+        )
+
+    if not args.dont_save and dist.get_rank() == 0:
         with open(filename, "w") as f:
             json.dump(
                 {
@@ -269,9 +457,12 @@ if __name__ == "__main__":
                     "metrics": {
                         "wall_time": metrics["wall_time"],
                         "total_processed": metrics["total_processed"],
+                        "exact_match_acc": metrics.get("exact_match_acc", None),
+                        "empty_cell_acc": metrics.get("empty_cell_acc", None),
                     },
                     "model_path": args.model_path,
                     "checkpoint_path": args.checkpoint_path,
+                    "policy_checkpoint_path": args.policy_checkpoint_path,
                     "gen_length": args.gen_length,
                     "diffusion_steps": args.diffusion_steps,
                     "block_length": args.block_length,

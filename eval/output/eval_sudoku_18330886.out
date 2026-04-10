@@ -1,0 +1,65 @@
+Using GPUs: 0 (nproc_per_node=1)
+Eval mode: base_low_confidence
+Policy checkpoint: /scratch/user/ajayjagan2511/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best.pt
+Sudoku CSV: /scratch/user/ajayjagan2511/d1/dataset/toy_sudoku.csv
+PYTHON=/scratch/user/ajayjagan2511/miniconda3/envs/d1/bin/python
+Running evaluation on sudoku with gen_length=16, batch_size=8
+/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- configuration_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- modeling_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 6/6 [00:00<00:00, 653.49it/s]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:00,  7.56it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:00,  7.75it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:00<00:00,  7.86it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:00<00:00,  7.92it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:00<00:00,  7.90it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00,  8.36it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00,  8.08it/s]
+Loaded Testing Sudoku dataset with 500 examples
+evaluating 256 examples
+Saving generations to eval_results/sudoku_base_16_8_0_generations.json
+  0%|          | 0/32 [00:00<?, ?it/s]  0%|          | 0/32 [00:00<?, ?it/s]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/scratch/user/ajayjagan2511/d1/eval/eval.py", line 441, in <module>
+[rank0]:     metrics = evaluate(
+[rank0]:   File "/scratch/user/ajayjagan2511/d1/eval/eval.py", line 82, in evaluate
+[rank0]:     out = generate(
+[rank0]:   File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/scratch/user/ajayjagan2511/d1/eval/generate.py", line 106, in generate
+[rank0]:     assert gen_length % block_length == 0
+[rank0]: AssertionError
+[rank0]:[W409 21:59:38.948149663 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0409 21:59:40.073000 1044197 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1044222) of binary: /scratch/user/ajayjagan2511/miniconda3/envs/d1/bin/python
+Traceback (most recent call last):
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+eval.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-09_21:59:40
+  host      : g076.cluster
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1044222)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

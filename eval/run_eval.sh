@@ -1,19 +1,51 @@
 #!/bin/bash
-#SBATCH --job-name=eval
+#SBATCH --job-name=sudoku-eval
 #SBATCH --time=1:00:00
+#SBATCH --open-mode=append
 #SBATCH --ntasks=1 
 #SBATCH --ntasks-per-node=1  
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=120G       
-#SBATCH --output=/work/nvme/bdgk/anant/d1/%x_%j.log  
-#SBATCH --gres=gpu:1
-#SBATCH --partition=gpuH200x8-interactive
-#SBATCH --account=bcjx-delta-gpu
+#SBATCH --gres=gpu:a100:1
+#SBATCH --output="output/eval_sudoku_%j.out"
 
 set -euo pipefail
 
+module purge
+module load WebProxy
+module load CUDA/12.4.0
+module load GCC/11.3.0
+export http_proxy=http://10.73.132.63:8080
+export https_proxy=http://10.73.132.63:8080
+
+# Activate your env before launch if your cluster requires it.
+# Non-interactive shells (SLURM) do not load conda init hooks automatically.
+source /scratch/user/ajayjagan2511/miniconda3/etc/profile.d/conda.sh
+conda activate /scratch/user/ajayjagan2511/miniconda3/envs/d1
+
+# Hardcoded evaluation config for SLURM runs.
+# Update these paths/values directly in this file before submission.
+EVAL_MODE="base_low_confidence"  # options: policy, base_low_confidence
+
+POLICY_CKPT="/scratch/user/ajayjagan2511/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best.pt"
+# Used only in policy mode. Base mode uses eval/sudoku.py default test set (4x4_test_sudoku.csv).
+SUDOKU_CSV="/scratch/user/ajayjagan2511/d1/dataset/toy_sudoku.csv"
+GPU_ID="0"
+
+if [ "$EVAL_MODE" = "policy" ]; then
+  if [ ! -f "$POLICY_CKPT" ]; then
+    echo "Policy checkpoint not found: $POLICY_CKPT"
+    exit 1
+  fi
+
+  if [ ! -f "$SUDOKU_CSV" ]; then
+    echo "Sudoku CSV not found: $SUDOKU_CSV"
+    exit 1
+  fi
+fi
+
 # Configuration variables
-GPU_IDS=(0)  # Default GPU IDs to use
+GPU_IDS=($GPU_ID)
 
 MASTER_PORT=29411
 
@@ -21,20 +53,15 @@ MASTER_PORT=29411
 #TASKS=("countdown" "sudoku" "math" "gsm8k")
 # We only plan to use "soduko" as evaluation task
 TASKS=("sudoku")
-GEN_LENGTHS=(128)
-
-# Set GPU IDs from command line if provided
-if [ $# -gt 0 ]; then
-  # Clear default GPU list and add provided GPUs
-  GPU_IDS=()
-  for arg in "$@"; do
-    GPU_IDS+=("$arg")
-  done
-fi
+GEN_LENGTHS=(16)
 
 GPU_LIST=$(IFS=,; echo "${GPU_IDS[*]}")
 NUM_GPUS=${#GPU_IDS[@]}
 echo "Using GPUs: $GPU_LIST (nproc_per_node=$NUM_GPUS)"
+echo "Eval mode: $EVAL_MODE"
+echo "Policy checkpoint: $POLICY_CKPT"
+echo "Sudoku CSV: $SUDOKU_CSV"
+echo "PYTHON=$(which python)"
 
 for task in "${TASKS[@]}"; do
   for gen_length in "${GEN_LENGTHS[@]}"; do
@@ -46,17 +73,39 @@ for task in "${TASKS[@]}"; do
     fi
     
     echo "Running evaluation on $task with gen_length=$gen_length, batch_size=$batch_size"
-    
-    CUDA_VISIBLE_DEVICES=$GPU_LIST torchrun \
-      --nproc_per_node $NUM_GPUS \
-      --master_port $MASTER_PORT \
-      eval.py \
-      --toy_evaluation \
-      --dataset $task \
-      --batch_size $batch_size \
-      --gen_length $gen_length \
-      --output_dir "eval_results" \
-      --model_path "GSAI-ML/LLaDA-1.5"
+
+    if [ "$EVAL_MODE" = "policy" ]; then
+      CUDA_VISIBLE_DEVICES=$GPU_LIST python -m torch.distributed.run \
+        --nproc_per_node $NUM_GPUS \
+        --master_port $MASTER_PORT \
+        eval.py \
+        --dataset $task \
+        --batch_size $batch_size \
+        --gen_length $gen_length \
+        --block_length 16 \
+        --diffusion_steps 16 \
+        --sudoku_csv "$SUDOKU_CSV" \
+        --policy_checkpoint_path "$POLICY_CKPT" \
+        --remasking_strategy policy \
+        --output_dir "eval_results" \
+        --model_path "GSAI-ML/LLaDA-1.5"
+    elif [ "$EVAL_MODE" = "base_low_confidence" ]; then
+      CUDA_VISIBLE_DEVICES=$GPU_LIST python -m torch.distributed.run \
+        --nproc_per_node $NUM_GPUS \
+        --master_port $MASTER_PORT \
+        eval.py \
+        --dataset $task \
+        --batch_size $batch_size \
+        --gen_length $gen_length \
+        --block_length 16 \
+        --diffusion_steps 16 \
+        --remasking_strategy low_confidence \
+        --output_dir "eval_results" \
+        --model_path "GSAI-ML/LLaDA-1.5"
+    else
+      echo "Unknown EVAL_MODE: $EVAL_MODE"
+      exit 1
+    fi
   done
 done
 
