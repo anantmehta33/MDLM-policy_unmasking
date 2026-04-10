@@ -1,0 +1,8 @@
+LOGDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku/slurm/18330664
+WORKDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku
+ACCEL_CONFIG=/scratch/user/ajayjagan2511/d1/diffu-grpo/accelerate.yaml
+NUM_GPUS=2
+PYTHON=/scratch/user/ajayjagan2511/miniconda3/envs/d1/bin/python
+srun: error: g010: tasks 0-1,3-4: Exited with exit code 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-04-09T19:17:34.973] error: *** JOB 18330664 ON g010 CANCELLED AT 2026-04-09T19:17:34 DUE to SIGNAL Terminated ***

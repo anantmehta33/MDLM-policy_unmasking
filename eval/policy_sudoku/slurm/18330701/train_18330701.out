@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1209, in <module>
+    main()
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1205, in main
+    launch_command(args)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1175, in launch_command
+    args, defaults, mp_from_config_flag = _validate_launch_command(args)
+  File "/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 993, in _validate_launch_command
+    raise ValueError("You need to use at least 2 processes to use `--multi_gpu`.")
+ValueError: You need to use at least 2 processes to use `--multi_gpu`.

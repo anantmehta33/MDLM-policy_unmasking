@@ -1,0 +1,4 @@
+LOGDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku/slurm/18330651
+WORKDIR=/scratch/user/ajayjagan2511/d1/eval/policy_sudoku
+ACCEL_CONFIG=/scratch/user/ajayjagan2511/d1/diffu-grpo/accelerate.yaml
+NUM_GPUS=2

@@ -1,0 +1,11 @@
+/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- configuration_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- modeling_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 6/6 [00:00<00:00, 127.52it/s]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:04,  1.11it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:03,  1.30it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:02<00:02,  1.19it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:03<00:01,  1.35it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.45it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.93it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.55it/s]
+Final tokens: 3142241432134324
