@@ -1,13 +1,27 @@
 #!/bin/bash
+#SBATCH --job-name=eval
+#SBATCH --time=1:00:00
+#SBATCH --ntasks=1 
+#SBATCH --ntasks-per-node=1  
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=120G       
+#SBATCH --output=/work/nvme/bdgk/anant/d1/%x_%j.log  
+#SBATCH --gres=gpu:1
+#SBATCH --partition=gpuH200x8-interactive
+#SBATCH --account=bcjx-delta-gpu
+
+set -euo pipefail
 
 # Configuration variables
-GPU_IDS=(0 1 2 3 4 5 6 7)
+GPU_IDS=(0)  # Default GPU IDs to use
 
 MASTER_PORT=29411
 
 # Arrays of tasks and generation lengths
-TASKS=("countdown" "sudoku" "math" "gsm8k")
-GEN_LENGTHS=(128 256)
+#TASKS=("countdown" "sudoku" "math" "gsm8k")
+# We only plan to use "soduko" as evaluation task
+TASKS=("sudoku")
+GEN_LENGTHS=(128)
 
 # Set GPU IDs from command line if provided
 if [ $# -gt 0 ]; then
@@ -37,11 +51,12 @@ for task in "${TASKS[@]}"; do
       --nproc_per_node $NUM_GPUS \
       --master_port $MASTER_PORT \
       eval.py \
+      --toy_evaluation \
       --dataset $task \
       --batch_size $batch_size \
       --gen_length $gen_length \
       --output_dir "eval_results" \
-      --model_path "/data0/shared/LLaDA-8B-Instruct/"
+      --model_path "GSAI-ML/LLaDA-1.5"
   done
 done
 

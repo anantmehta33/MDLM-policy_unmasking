@@ -38,13 +38,19 @@ class GSM8KDataset(torch.utils.data.Dataset):
         self.load_test_dataset()
         self.create_few_shot_prompt()
 
+        if subsample != -1 and subsample > len(self.dataset):
+            print(
+                f"Requested subsample={subsample} exceeds dataset size={len(self.dataset)}; "
+                f"using full dataset instead."
+            )
+            subsample = len(self.dataset)
+
         self.subsample = (
             np.random.choice(len(self.dataset), subsample, replace=False)
             if subsample != -1
             else np.arange(len(self.dataset))
         )
         print(f"evaluating {len(self.subsample)} examples")
-        assert subsample <= len(self.dataset), "Subsample size is greater than dataset size"
 
     def __len__(self):
         return len(self.subsample)

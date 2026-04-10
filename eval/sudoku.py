@@ -35,9 +35,13 @@ class SudokuDataset(GSM8KDataset):
         add_reasoning=True,
         system_prompt=SUDOKU_SYSTEM_PROMPT,
         subsample=256,
+        toy_evaluation=False,
     ):
         cur_path = os.path.dirname(os.path.abspath(__file__))
-        self.sudoku_file_path = f"{cur_path}/../dataset/4x4_test_sudoku.csv"
+        if toy_evaluation:
+            self.sudoku_file_path = f"{cur_path}/../dataset/toy_sudoku.csv"
+        else:
+            self.sudoku_file_path = f"{cur_path}/../dataset/4x4_test_sudoku.csv"
         super().__init__(tokenizer, num_examples, add_reasoning, system_prompt, subsample)
 
     def load_test_dataset(self):

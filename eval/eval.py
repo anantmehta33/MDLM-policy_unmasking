@@ -198,6 +198,7 @@ if __name__ == "__main__":
     parser.add_argument("--dont_save", action="store_true")
     parser.add_argument("--output_dir", type=str, default="results/")
     parser.add_argument("--dont_use_box", action="store_true")
+    parser.add_argument("--toy_evaluation", action="store_true")
     args = parser.parse_args()
 
     args.diffusion_steps = args.gen_length // 2
@@ -225,6 +226,7 @@ if __name__ == "__main__":
         subsample=num_evals[args.dataset],
         num_examples=args.few_shot,
         add_reasoning=True,  # prefill for all models
+        toy_evaluation=args.toy_evaluation,
     )
 
     dataloader = DataLoader(
