@@ -1,0 +1,31 @@
+Using GPUs: 0 (nproc_per_node=1)
+Policy checkpoint: /scratch/user/ajayjagan2511/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best.pt
+Sudoku CSV: /scratch/user/ajayjagan2511/d1/dataset/toy_sudoku.csv
+PYTHON=/scratch/user/ajayjagan2511/miniconda3/envs/d1/bin/python
+Running evaluation on sudoku with gen_length=128, batch_size=8
+/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- configuration_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+A new version of the following files was downloaded from https://huggingface.co/GSAI-ML/LLaDA-1.5:
+- modeling_llada.py
+. Make sure to double-check they do not contain any added malicious code. To avoid downloading new versions of the code file, you can pin a revision.
+Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 6/6 [00:00<00:00, 226.70it/s]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:04,  1.09it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:01<00:03,  1.30it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:02<00:02,  1.33it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:03<00:01,  1.37it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:03<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  2.02it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:03<00:00,  1.61it/s]
+Saving generations to eval_results/sudoku_base_16_8_0_generations.json
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:14<00:00, 14.58s/it]100%|██████████| 1/1 [00:14<00:00, 14.58s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]100%|██████████| 1/1 [00:00<00:00,  2.05it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]100%|██████████| 1/1 [00:00<00:00,  2.04it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.15s/it]100%|██████████| 1/1 [00:01<00:00,  1.15s/it]
+[Sudoku Policy Eval] exact_match_acc=0.0000 empty_cell_acc=0.2753 processed=99
+All evaluations completed!

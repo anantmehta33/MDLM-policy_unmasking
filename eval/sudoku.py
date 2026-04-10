@@ -13,6 +13,7 @@ Rules:
 - Each row must contain digits 1-4 exactly once
 - Each column must contain digits 1-4 exactly once
 - Each 2x2 box must contain digits 1-4 exactly once
+- Do not change the digits already provided in the puzzle.
 
 Important: Your solution must be a COMPLETE 16-character string with only the digits 1-4, representing your final solved grid.
 

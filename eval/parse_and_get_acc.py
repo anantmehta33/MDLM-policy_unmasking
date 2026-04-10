@@ -438,4 +438,4 @@ def aggregate_results(directory="."):
 
 
 if __name__ == "__main__":
-    aggregate_results(directory="/work/nvme/bdgk/anant/d1/eval/eval_results")
+    aggregate_results(directory="eval_results/")
