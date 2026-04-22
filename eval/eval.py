@@ -25,6 +25,27 @@ from human_eval import HumanEvalDataset
 from mbpp import MBPPDataset
 from parsers import Parser
 
+SUDOKU_SYSTEM_PROMPT = """
+Please solve the following 4x4 Sudoku puzzle. The puzzle is provided as a 16-character string reading left-to-right, top-to-bottom, where '0' represents empty cells.
+
+Rules:
+- Fill empty cells with digits 1-4
+- Each row must contain digits 1-4 exactly once
+- Each column must contain digits 1-4 exactly once
+- Each 2x2 box must contain digits 1-4 exactly once
+- Do not change the digits already provided in the puzzle.
+
+Important: Your solution must be a COMPLETE 16-character string with only the digits 1-4, representing your final solved grid.
+
+Respond in this exact format:
+<reasoning>
+Your step-by-step solving process
+</reasoning>
+<answer>
+[16-character solution string with no spaces or separators]
+</answer>
+"""
+
 
 DATASET_MAP = {
     "gsm8k": GSM8KDataset,
@@ -66,12 +87,22 @@ def evaluate(
     steps=64,
     block_length=32,
     remasking_strategy="low_confidence",
+    policy_model=None,
+    policy_digit_token_ids=None,
+    policy_sample_actions=False,
+    policy_reward_guided=False,
+    policy_reward_candidates=4,
 ):
     model.eval()
     total_processed = torch.tensor(0, device=model.device)
     wall_times = []
     all_generations = []
     device = model.device
+    mask_id = getattr(model.config, "mask_token_id", None)
+    if mask_id is None:
+        mask_id = tokenizer.mask_token_id
+    if mask_id is None:
+        mask_id = 126336
 
     for batch in tqdm(dataloader, disable=(dist.get_rank() != 0)):
         start_time = time.time()
@@ -80,17 +111,51 @@ def evaluate(
         questions = batch["questions"]
         prompts = batch["prompts"]
 
-        out = generate(
-            model,
-            input_ids,
-            tokenizer,
-            steps=steps,
-            gen_length=gen_length,
-            block_length=block_length,
-            temperature=temperature,
-            cfg_scale=cfg_scale,
-            remasking=remasking_strategy,
-        )
+        if remasking_strategy == "policy":
+            if policy_model is None or policy_digit_token_ids is None:
+                raise ValueError(
+                    "Policy remasking in evaluate() requires policy_model and policy_digit_token_ids"
+                )
+
+            init_gen_ids, given_mask = _build_sudoku_policy_batch_inputs(
+                questions=questions,
+                gen_length=gen_length,
+                device=device,
+                mask_id=mask_id,
+                digit_token_ids=policy_digit_token_ids,
+            )
+
+            out = generate(
+                model,
+                input_ids,
+                tokenizer,
+                steps=steps,
+                gen_length=gen_length,
+                block_length=block_length,
+                temperature=temperature,
+                cfg_scale=cfg_scale,
+                remasking=remasking_strategy,
+                mask_id=mask_id,
+                init_gen_ids=init_gen_ids,
+                policy_model=policy_model,
+                policy_digit_token_ids=policy_digit_token_ids,
+                policy_given_mask=given_mask,
+                policy_sample_actions=policy_sample_actions,
+                policy_reward_guided=policy_reward_guided,
+                policy_reward_candidates=policy_reward_candidates,
+            )
+        else:
+            out = generate(
+                model,
+                input_ids,
+                tokenizer,
+                steps=steps,
+                gen_length=gen_length,
+                block_length=block_length,
+                temperature=temperature,
+                cfg_scale=cfg_scale,
+                remasking=remasking_strategy,
+            )
 
         generated_texts = tokenizer.batch_decode(out[:, -gen_length:], skip_special_tokens=False)
         example_result = [
@@ -147,16 +212,45 @@ def _load_sudoku_policy(checkpoint_path, device):
     return policy_model
 
 
+def _extract_sudoku_puzzle(question):
+    match = re.search(r"([0-9]{16})", question)
+    if not match:
+        raise ValueError(f"Could not find 16-digit Sudoku puzzle in question: {question!r}")
+    return match.group(1)
+
+
+def _build_sudoku_policy_batch_inputs(questions, gen_length, device, mask_id, digit_token_ids):
+    if gen_length != 16:
+        raise ValueError(f"Sudoku policy remasking requires gen_length=16, got {gen_length}")
+
+    bsz = len(questions)
+    init_gen_ids = torch.full((bsz, gen_length), mask_id, dtype=torch.long, device=device)
+    given_mask = torch.zeros((bsz, gen_length), dtype=torch.long, device=device)
+
+    for bi, question in enumerate(questions):
+        puzzle = _extract_sudoku_puzzle(question)
+        for j, ch in enumerate(puzzle):
+            if ch != "0":
+                d = int(ch)
+                init_gen_ids[bi, j] = digit_token_ids[d - 1]
+                given_mask[bi, j] = 1
+
+    return init_gen_ids, given_mask
+
+
 def evaluate_sudoku_policy_csv(
     model,
     tokenizer,
-    policy_checkpoint_path,
     csv_path,
     steps,
     batch_size,
+    remasking_strategy="low_confidence",
+    policy_checkpoint_path="",
     temperature=0.0,
     cfg_scale=0.0,
     sample_actions=False,
+    policy_reward_guided=False,
+    policy_reward_candidates=4,
 ):
     if not os.path.exists(csv_path):
         raise FileNotFoundError(f"Sudoku CSV not found: {csv_path}")
@@ -171,7 +265,11 @@ def evaluate_sudoku_policy_csv(
     digit_token_ids = [_single_token_id(tokenizer, str(d)) for d in (1, 2, 3, 4)]
     token_to_digit = {tok: idx + 1 for idx, tok in enumerate(digit_token_ids)}
 
-    policy_model = _load_sudoku_policy(policy_checkpoint_path, device)
+    policy_model = None
+    if remasking_strategy == "policy":
+        if len(policy_checkpoint_path) == 0:
+            raise ValueError("Policy remasking requires policy_checkpoint_path")
+        policy_model = _load_sudoku_policy(policy_checkpoint_path, device)
 
     rows = []
     with open(csv_path, "r", newline="") as f:
@@ -211,23 +309,44 @@ def evaluate_sudoku_policy_csv(
 
         prompt = torch.empty((bsz, 0), dtype=torch.long, device=device)
 
-        out = generate(
-            model,
-            prompt,
-            tokenizer,
-            steps=steps,
-            gen_length=16,
-            block_length=16,
-            temperature=temperature,
-            cfg_scale=cfg_scale,
-            remasking="policy",
-            mask_id=mask_id,
-            init_gen_ids=init_gen_ids,
-            policy_model=policy_model,
-            policy_digit_token_ids=digit_token_ids,
-            policy_given_mask=given_mask,
-            policy_sample_actions=sample_actions,
-        )
+        if remasking_strategy == "policy":
+            out = generate(
+                model,
+                prompt,
+                tokenizer,
+                steps=steps,
+                gen_length=16,
+                block_length=16,
+                temperature=temperature,
+                cfg_scale=cfg_scale,
+                remasking="policy",
+                mask_id=mask_id,
+                init_gen_ids=init_gen_ids,
+                policy_model=policy_model,
+                policy_digit_token_ids=digit_token_ids,
+                policy_given_mask=given_mask,
+                policy_sample_actions=sample_actions,
+                policy_reward_guided=policy_reward_guided,
+                policy_reward_candidates=policy_reward_candidates,
+            )
+        elif remasking_strategy == "low_confidence":
+            out = generate(
+                model,
+                prompt,
+                tokenizer,
+                steps=steps,
+                gen_length=16,
+                block_length=16,
+                temperature=temperature,
+                cfg_scale=cfg_scale,
+                remasking="low_confidence",
+                mask_id=mask_id,
+                init_gen_ids=init_gen_ids,
+            )
+        else:
+            raise ValueError(
+                f"Unsupported remasking_strategy for sudoku csv evaluation: {remasking_strategy}"
+            )
 
         preds = out[:, :16].detach().cpu().tolist()
         for bi, (puzzle, solution) in enumerate(batch_rows):
@@ -355,9 +474,10 @@ if __name__ == "__main__":
     parser.add_argument("--policy_checkpoint_path", type=str, default="")
     parser.add_argument("--remasking_strategy", type=str, default="low_confidence")
     parser.add_argument("--policy_sample_actions", action="store_true")
+    parser.add_argument("--policy_reward_guided", action="store_true")
+    parser.add_argument("--policy_reward_candidates", type=int, default=4)
     args = parser.parse_args()
 
-    args.diffusion_steps = args.gen_length // 2
     num_evals = {"gsm8k": -1, "math": -1, "countdown": 256, "sudoku": 256, "humaneval": -1, "mbpp": -1}
 
     model = AutoModel.from_pretrained(args.model_path, trust_remote_code=True, torch_dtype=torch.bfloat16).to(
@@ -377,11 +497,27 @@ if __name__ == "__main__":
                 dist.broadcast(param.data, src=0)
             print(f"Rank {local_rank}: Parameters synchronized")
 
-    direct_sudoku_policy_eval = (
-        args.dataset == "sudoku" and len(args.policy_checkpoint_path) > 0 and len(args.sudoku_csv) > 0
-    )
+    use_sudoku_csv_eval = args.dataset == "sudoku"
 
-    if not direct_sudoku_policy_eval:
+    cur_path = os.path.dirname(os.path.abspath(__file__))
+    sudoku_csv_path = args.sudoku_csv if len(args.sudoku_csv) > 0 else f"{cur_path}/../dataset/4x4_test_sudoku.csv"
+
+    policy_model = None
+    policy_digit_token_ids = None
+    if args.remasking_strategy == "policy" and not use_sudoku_csv_eval:
+        if args.dataset != "sudoku":
+            raise ValueError("Policy remasking currently supports only dataset=sudoku in evaluate().")
+        if len(args.policy_checkpoint_path) == 0:
+            raise ValueError(
+                "Policy remasking requires --policy_checkpoint_path when using evaluate() path."
+            )
+        if args.gen_length != 16:
+            raise ValueError("Policy remasking for sudoku requires --gen_length 16.")
+
+        policy_model = _load_sudoku_policy(args.policy_checkpoint_path, torch.device("cuda", local_rank))
+        policy_digit_token_ids = [_single_token_id(tokenizer, str(d)) for d in (1, 2, 3, 4)]
+
+    if not use_sudoku_csv_eval:
         dataset = DATASET_MAP[args.dataset](
             tokenizer,
             subsample=num_evals[args.dataset],
@@ -409,19 +545,26 @@ if __name__ == "__main__":
     if len(args.suffix) > 0:
         model_name = model_name + f"_{args.suffix}"
 
+    if args.remasking_strategy == "policy" and len(args.policy_checkpoint_path) > 0:
+        policy_name = os.path.splitext(os.path.basename(args.policy_checkpoint_path))[0]
+        model_name = model_name + f"_{policy_name}"
+
     os.makedirs(args.output_dir, exist_ok=True)
     filename = f"{args.output_dir}/{args.dataset}_{model_name}_{args.gen_length}_{args.diffusion_steps}_{dist.get_rank()}_generations.json"
     print(f"Saving generations to {filename}")
 
-    if direct_sudoku_policy_eval:
+    if use_sudoku_csv_eval:
         policy_result = evaluate_sudoku_policy_csv(
             model=model,
             tokenizer=tokenizer,
-            policy_checkpoint_path=args.policy_checkpoint_path,
-            csv_path=args.sudoku_csv,
+            csv_path=sudoku_csv_path,
             steps=args.diffusion_steps,
             batch_size=args.batch_size,
+            remasking_strategy=args.remasking_strategy,
+            policy_checkpoint_path=args.policy_checkpoint_path,
             sample_actions=args.policy_sample_actions,
+            policy_reward_guided=args.policy_reward_guided,
+            policy_reward_candidates=args.policy_reward_candidates,
         )
         metrics = {
             "wall_time": 0.0,
@@ -447,6 +590,11 @@ if __name__ == "__main__":
             block_length=args.block_length,
             steps=args.diffusion_steps,
             remasking_strategy=args.remasking_strategy,
+            policy_model=policy_model,
+            policy_digit_token_ids=policy_digit_token_ids,
+            policy_sample_actions=args.policy_sample_actions,
+            policy_reward_guided=args.policy_reward_guided,
+            policy_reward_candidates=args.policy_reward_candidates,
         )
 
     if not args.dont_save and dist.get_rank() == 0:

@@ -1,0 +1,4 @@
+Using GPUs: 0 (nproc_per_node=1)
+Eval mode: base_low_confidence
+Policy checkpoint: /work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best.pt
+/var/spool/slurmd/job2172529/slurm_script: line 66: SUDOKU_CSV: unbound variable

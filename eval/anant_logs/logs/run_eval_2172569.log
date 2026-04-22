@@ -1,0 +1,51 @@
+Running evaluation on sudoku with gen_length=16, batch_size=8
+/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:750: UserWarning: Attempted to get default timeout for nccl backend, but NCCL support is not compiled
+  warnings.warn(
+Traceback (most recent call last):
+  File "/work/nvme/bdgk/anant/d1/eval/eval.py", line 353, in <module>
+    local_rank = setup_ddp()
+  File "/work/nvme/bdgk/anant/d1/eval/eval.py", line 70, in setup_ddp
+    dist.init_process_group("nccl")
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+    return func(*args, **kwargs)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+    func_return = func(*args, **kwargs)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1721, in init_process_group
+    default_pg, _ = _new_process_group_helper(
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1959, in _new_process_group_helper
+    raise RuntimeError("Distributed package doesn't have NCCL built in")
+RuntimeError: Distributed package doesn't have NCCL built in
+E0421 17:32:54.667000 2274510 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 2274517) of binary: /u/amehta4/miniconda3/envs/d1/bin/python
+Traceback (most recent call last):
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+eval.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-21_17:32:54
+  host      : gh116.hsn.cm.delta.internal.ncsa.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2274517)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
