@@ -32,8 +32,7 @@ EVAL_MODE="policy"  # options: policy, base_low_confidence
 
 # Policy sweep config used only when EVAL_MODE=policy.
 POLICY_CKPTS=(
-  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs4_bs8_e200/policy_best_GSAI-ML_LLaDA-1.5-e200.pt"
-  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs8_bs8/policy_best_GSAI-ML_LLaDA-1.5.pt"
+  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best_GSAI-ML_LLaDA-1.5.pt"
 )
 DIFFUSION_STEPS=(2 4 8)
 

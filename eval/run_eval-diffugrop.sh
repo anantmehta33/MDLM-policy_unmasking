@@ -32,9 +32,13 @@ EVAL_MODE="policy"  # options: policy, base_low_confidence
 
 # Policy sweep config used only when EVAL_MODE=policy.
 POLICY_CKPTS=(
-  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best_GSAI-ML_LLaDA-8B-Base.pt"
+  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs4_bs8_e200/policy_best_GSAI-ML_LLaDA-1.5-e200.pt"
+  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs8_bs8/policy_best_GSAI-ML_LLaDA-1.5.pt"
 )
 DIFFUSION_STEPS=(2 4 8)
+
+# Kept for base_low_confidence mode.
+BASE_DIFFUSION_STEPS=8
 
 # Used only in policy mode. Base mode uses eval/sudoku.py default test set (4x4_test_sudoku.csv).
 SUDOKU_CSV="/work/nvme/bdgk/anant/d1/dataset/4x4_test_sudoku.csv"
@@ -106,28 +110,24 @@ for task in "${TASKS[@]}"; do
             --remasking_strategy policy \
             --policy_reward_guided \
             --policy_reward_candidates 4 \
-            --output_dir "eval_8B" \
-            --model_path "GSAI-ML/LLaDA-8B-Base"
+            --output_dir "eval_results" \
+            --model_path "GSAI-ML/LLaDA-1.5"
         done
       done
     elif [ "$EVAL_MODE" = "base_low_confidence" ]; then
-      for diffusion_steps in "${DIFFUSION_STEPS[@]}"; do
-        echo "Base low_confidence eval: diffusion_steps=$diffusion_steps"
-
-        CUDA_VISIBLE_DEVICES=$GPU_LIST python -m torch.distributed.run \
-          --nproc_per_node $NUM_GPUS \
-          --master_port $MASTER_PORT \
-          eval.py \
-          --dataset $task \
-          --batch_size $batch_size \
-          --gen_length $gen_length \
-          --sudoku_csv "$SUDOKU_CSV" \
-          --block_length 16 \
-          --diffusion_steps $diffusion_steps \
-          --remasking_strategy low_confidence \
-          --output_dir "eval_8B" \
-          --model_path "GSAI-ML/LLaDA-8B-Base"
-      done
+      CUDA_VISIBLE_DEVICES=$GPU_LIST python -m torch.distributed.run \
+        --nproc_per_node $NUM_GPUS \
+        --master_port $MASTER_PORT \
+        eval.py \
+        --dataset $task \
+        --batch_size $batch_size \
+        --gen_length $gen_length \
+        --sudoku_csv "$SUDOKU_CSV" \
+        --block_length 16 \
+        --diffusion_steps $BASE_DIFFUSION_STEPS \
+        --remasking_strategy low_confidence \
+        --output_dir "eval_results" \
+        --model_path "GSAI-ML/LLaDA-1.5"
     else
       echo "Unknown EVAL_MODE: $EVAL_MODE"
       exit 1
