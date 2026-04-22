@@ -5,6 +5,48 @@ from tqdm import tqdm
 import torch.distributed as dist
 
 
+def _token_ids_to_digits(token_ids, digit_token_ids):
+    digits = torch.zeros_like(token_ids)
+    for idx, tok_id in enumerate(digit_token_ids):
+        digits[token_ids == tok_id] = idx + 1
+    return digits
+
+
+def _count_duplicates_1d(values):
+    counts = torch.bincount(values, minlength=5)
+    dup = torch.clamp(counts[1:] - 1, min=0)
+    return dup.sum()
+
+
+def _sudoku_error_score_4x4(board_digits):
+    bsz = board_digits.shape[0]
+    scores = torch.zeros(bsz, device=board_digits.device, dtype=torch.float32)
+
+    for b in range(bsz):
+        grid = board_digits[b]
+        score = 0.0
+        for r in range(4):
+            row = grid[r * 4 : (r + 1) * 4]
+            score += _count_duplicates_1d(row).item()
+        for c in range(4):
+            col = torch.stack([grid[r * 4 + c] for r in range(4)], dim=0)
+            score += _count_duplicates_1d(col).item()
+        for sr in (0, 2):
+            for sc in (0, 2):
+                block = torch.stack(
+                    [
+                        grid[(sr + dr) * 4 + (sc + dc)]
+                        for dr in range(2)
+                        for dc in range(2)
+                    ],
+                    dim=0,
+                )
+                score += _count_duplicates_1d(block).item()
+        scores[b] = score
+
+    return scores
+
+
 def _build_policy_state_features(
     logits,
     token_ids,
@@ -85,6 +127,8 @@ def generate(
     policy_digit_token_ids=None,
     policy_given_mask=None,
     policy_sample_actions=False,
+    policy_reward_guided=False,
+    policy_reward_candidates=4,
 ):
     """
     Optimized version of the generate function.
@@ -177,6 +221,56 @@ def generate(
                     if given is not None:
                         curr_segment = x[:, gen_start:gen_end]
                         next_segment = torch.where(given > 0, curr_segment, next_segment)
+
+                    if policy_reward_guided:
+                        if policy_reward_candidates < 1:
+                            raise ValueError("policy_reward_candidates must be >= 1")
+
+                        best_next_segment = next_segment.clone()
+                        best_scores = torch.full(
+                            (x.shape[0],),
+                            float("inf"),
+                            device=x.device,
+                            dtype=torch.float32,
+                        )
+
+                        candidate_actions = [actions_keep]
+                        for _ in range(policy_reward_candidates - 1):
+                            candidate_actions.append(torch.distributions.Bernoulli(probs=keep_probs).sample().long())
+
+                        for cand_actions in candidate_actions:
+                            cand_actions = cand_actions.clone()
+                            if given is not None:
+                                cand_actions[given > 0] = 1
+
+                            cand_segment = torch.where(
+                                cand_actions > 0,
+                                pred_segment,
+                                torch.full_like(pred_segment, mask_id),
+                            )
+
+                            if given is not None:
+                                curr_segment = x[:, gen_start:gen_end]
+                                cand_segment = torch.where(given > 0, curr_segment, cand_segment)
+
+                            cand_x = x.clone()
+                            cand_x[:, gen_start:gen_end] = cand_segment
+                            next_logits = model(cand_x).logits[:, gen_start:gen_end, :]
+                            next_pred_tokens = torch.argmax(next_logits, dim=-1)
+                            next_pred_digits = _token_ids_to_digits(next_pred_tokens, policy_digit_token_ids)
+
+                            if given is not None:
+                                given_digits = _token_ids_to_digits(x[:, gen_start:gen_end], policy_digit_token_ids)
+                                next_pred_digits = torch.where(given > 0, given_digits, next_pred_digits)
+
+                            cand_scores = _sudoku_error_score_4x4(next_pred_digits)
+                            better = cand_scores < best_scores
+                            if better.any():
+                                best_scores = torch.where(better, cand_scores, best_scores)
+                                better_mask = better.unsqueeze(1).expand_as(best_next_segment)
+                                best_next_segment = torch.where(better_mask, cand_segment, best_next_segment)
+
+                        next_segment = best_next_segment
 
                     x[:, gen_start:gen_end] = next_segment
                     continue

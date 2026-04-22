@@ -2,8 +2,10 @@ import argparse
 import csv
 import os
 import random
+import re
+from collections import deque
 from dataclasses import dataclass
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, TextIO, Tuple
 
 import numpy as np
 import torch
@@ -114,6 +116,13 @@ def detect_default_train_csv(repo_root: str) -> str:
         if os.path.exists(path):
             return path
     return candidates[0]
+
+
+def sanitize_for_filename(value: str) -> str:
+    """Convert arbitrary text to a filesystem-safe filename fragment."""
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "_", value.strip())
+    safe = safe.strip("._-")
+    return safe or "model"
 
 
 class SudokuCSVDataset(Dataset):
@@ -431,6 +440,10 @@ def train_one_epoch(
     gamma: float,
     baseline_momentum: float,
     baseline_value: float,
+    reward_log_fh: Optional[TextIO] = None,
+    epoch: int = 0,
+    global_iteration_start: int = 0,
+    reward_window: Optional[deque] = None,
 ) -> Tuple[float, float, float, float, float, float]:
     policy.train()
     epoch_losses = []
@@ -440,7 +453,9 @@ def train_one_epoch(
     final_accs = []
     exact_rates = []
 
-    for batch in loader:
+    global_iteration = global_iteration_start
+
+    for iter_in_epoch, batch in enumerate(loader, start=1):
         puzzle = batch["puzzle"].to(device)
         solution = batch["solution"].to(device)
         given_mask = batch["given_mask"].to(device)
@@ -466,6 +481,17 @@ def train_one_epoch(
         loss.backward()
         torch.nn.utils.clip_grad_norm_(policy.parameters(), max_norm=1.0)
         optimizer.step()
+
+        if reward_log_fh is not None:
+            rolling_reward = batch_return_mean
+            if reward_window is not None:
+                reward_window.append(batch_return_mean)
+                rolling_reward = float(np.mean(reward_window))
+            reward_log_fh.write(
+                f"{epoch},{iter_in_epoch},{global_iteration},{batch_return_mean:.8f},{rolling_reward:.8f}\n"
+            )
+            reward_log_fh.flush()
+        global_iteration += 1
 
         epoch_losses.append(loss.item())
         episode_returns.append(batch_return_mean)
@@ -546,6 +572,7 @@ def main() -> None:
     parser.add_argument("--num_workers", type=int, default=2)
     parser.add_argument("--save_dir", type=str, default=os.path.join(repo_root, "policy_training", "checkpoints"))
     parser.add_argument("--mask_id", type=int, default=DEFAULT_MASK_ID)
+    parser.add_argument("--reward_log_file", type=str, default=None)
     args = parser.parse_args()
 
     set_seed(args.seed)
@@ -578,62 +605,82 @@ def main() -> None:
 
     baseline_value = 0.0
     best_metric = -1e9
-    best_ckpt = os.path.join(args.save_dir, "policy_best.pt")
+    model_name_safe = sanitize_for_filename(args.model_name)
+    best_ckpt = os.path.join(args.save_dir, f"policy_best_{model_name_safe}.pt")
+    reward_log_file = args.reward_log_file or os.path.join(
+        args.save_dir,
+        f"rewards_per_iteration_{model_name_safe}.csv",
+    )
 
-    for epoch in range(1, args.epochs + 1):
-        (
-            train_loss,
-            train_ret,
-            train_keep,
-            train_err,
-            train_empty_acc,
-            train_exact,
-        ) = train_one_epoch(
-            policy=policy,
-            llada=llada,
-            loader=train_loader,
-            optimizer=optimizer,
-            device=device,
-            steps_per_episode=args.reverse_steps,
-            gamma=args.gamma,
-            baseline_momentum=args.baseline_momentum,
-            baseline_value=baseline_value,
-        )
-        baseline_value = args.baseline_momentum * baseline_value + (1.0 - args.baseline_momentum) * train_ret
+    reward_log_exists = os.path.exists(reward_log_file)
+    global_iteration = 1
+    reward_window = deque(maxlen=5)
 
-        train_metrics = {
-            "mean_error": train_err,
-            "empty_cell_acc": train_empty_acc,
-            "exact_match_rate": train_exact,
-            "mean_keep_ratio": train_keep,
-        }
+    with open(reward_log_file, "a", newline="") as reward_fh:
+        if not reward_log_exists:
+            reward_fh.write("epoch,iteration_in_epoch,global_iteration,reward,rolling_reward_5\n")
+            reward_fh.flush()
 
-        print(
-            f"[Epoch {epoch}] loss={train_loss:.4f} return={train_ret:.4f} keep={train_keep:.4f} "
-            f"train_error={train_metrics['mean_error']:.4f} "
-            f"train_empty_acc={train_metrics['empty_cell_acc']:.4f} "
-            f"train_exact={train_metrics['exact_match_rate']:.4f}"
-        )
-
-        metric = train_metrics["exact_match_rate"] - 0.01 * train_metrics["mean_error"]
-        if metric > best_metric:
-            best_metric = metric
-            torch.save(
-                {
-                    "epoch": epoch,
-                    "policy_state_dict": policy.state_dict(),
-                    "policy_config": policy_cfg.__dict__,
-                    "args": vars(args),
-                    "train_metrics": train_metrics,
-                    "digit_token_ids": llada.digit_token_ids.detach().cpu().tolist(),
-                    "mask_id": llada.mask_id,
-                    "model_name": args.model_name,
-                },
-                best_ckpt,
+        for epoch in range(1, args.epochs + 1):
+            (
+                train_loss,
+                train_ret,
+                train_keep,
+                train_err,
+                train_empty_acc,
+                train_exact,
+            ) = train_one_epoch(
+                policy=policy,
+                llada=llada,
+                loader=train_loader,
+                optimizer=optimizer,
+                device=device,
+                steps_per_episode=args.reverse_steps,
+                gamma=args.gamma,
+                baseline_momentum=args.baseline_momentum,
+                baseline_value=baseline_value,
+                reward_log_fh=reward_fh,
+                epoch=epoch,
+                global_iteration_start=global_iteration,
+                reward_window=reward_window,
             )
-            print(f"Saved best checkpoint to {best_ckpt}")
+            global_iteration += len(train_loader)
+            baseline_value = args.baseline_momentum * baseline_value + (1.0 - args.baseline_momentum) * train_ret
+
+            train_metrics = {
+                "mean_error": train_err,
+                "empty_cell_acc": train_empty_acc,
+                "exact_match_rate": train_exact,
+                "mean_keep_ratio": train_keep,
+            }
+
+            print(
+                f"[Epoch {epoch}] loss={train_loss:.4f} return={train_ret:.4f} keep={train_keep:.4f} "
+                f"train_error={train_metrics['mean_error']:.4f} "
+                f"train_empty_acc={train_metrics['empty_cell_acc']:.4f} "
+                f"train_exact={train_metrics['exact_match_rate']:.4f}"
+            )
+
+            metric = train_metrics["exact_match_rate"] - 0.01 * train_metrics["mean_error"]
+            if metric > best_metric:
+                best_metric = metric
+                torch.save(
+                    {
+                        "epoch": epoch,
+                        "policy_state_dict": policy.state_dict(),
+                        "policy_config": policy_cfg.__dict__,
+                        "args": vars(args),
+                        "train_metrics": train_metrics,
+                        "digit_token_ids": llada.digit_token_ids.detach().cpu().tolist(),
+                        "mask_id": llada.mask_id,
+                        "model_name": args.model_name,
+                    },
+                    best_ckpt,
+                )
+                print(f"Saved best checkpoint to {best_ckpt}")
 
     print(f"Training complete. Best checkpoint: {best_ckpt}")
+    print(f"Per-iteration rewards saved to: {reward_log_file}")
 
 
 if __name__ == "__main__":
