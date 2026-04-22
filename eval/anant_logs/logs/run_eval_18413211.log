@@ -1,5 +1,0 @@
-Running evaluation on sudoku with gen_length=16, batch_size=8
-Policy eval: ckpt=/scratch/user/ajayjagan2511/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best_GSAI-ML_LLaDA-1.5.pt diffusion_steps=2
-/scratch/user/ajayjagan2511/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-[2026-04-22T13:18:15.989] error: *** JOB 18413211 ON r001 CANCELLED AT 2026-04-22T13:18:15 DUE to SIGNAL Terminated ***

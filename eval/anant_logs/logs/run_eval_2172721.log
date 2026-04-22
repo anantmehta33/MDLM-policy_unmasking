@@ -1,53 +1,0 @@
-Running evaluation on sudoku with gen_length=16, batch_size=8
-Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:00,  5.48it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:00,  5.04it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:00<00:00,  4.84it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:00<00:00,  4.79it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:01<00:00,  4.82it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:01<00:00,  5.45it/s]
-Loaded Testing Sudoku dataset with 500 examples
-evaluating 256 examples
-Saving generations to eval_results/sudoku_base_16_8_0_generations.json
-  0%|          | 0/32 [00:00<?, ?it/s]
-  0%|          | 0/1 [00:00<?, ?it/s][A  0%|          | 0/1 [00:00<?, ?it/s]
-  0%|          | 0/32 [00:00<?, ?it/s]
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/work/nvme/bdgk/anant/d1/eval/eval.py", line 463, in <module>
-[rank0]:     metrics = evaluate(
-[rank0]:   File "/work/nvme/bdgk/anant/d1/eval/eval.py", line 104, in evaluate
-[rank0]:     out = generate(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
-[rank0]:     return func(*args, **kwargs)
-[rank0]:   File "/work/nvme/bdgk/anant/d1/eval/generate.py", line 139, in generate
-[rank0]:     raise ValueError("policy remasking requires policy_model and policy_digit_token_ids")
-[rank0]: ValueError: policy remasking requires policy_model and policy_digit_token_ids
-[rank0]:[W421 17:45:17.898462308 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
-E0421 17:45:18.832000 1908721 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1908728) of binary: /u/amehta4/miniconda3/envs/d1/bin/python
-Traceback (most recent call last):
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/runpy.py", line 196, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/runpy.py", line 86, in _run_code
-    exec(code, run_globals)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 923, in <module>
-    main()
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
-    return f(*args, **kwargs)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
-    run(args)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
-    elastic_launch(
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-eval.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2026-04-21_17:45:18
-  host      : gh147.hsn.cm.delta.internal.ncsa.edu
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 1908728)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
