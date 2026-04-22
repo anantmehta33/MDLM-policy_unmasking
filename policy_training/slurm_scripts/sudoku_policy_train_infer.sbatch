@@ -1,33 +1,26 @@
 #!/bin/bash
 
 ##NECESSARY JOB SPECIFICATIONS
-#SBATCH --job-name=run_eval
-#SBATCH --time=6:00:00                     
-#SBATCH --ntasks=8                         
-#SBATCH --ntasks-per-node=2                   
+#SBATCH --job-name=run_train_infer_sudoku_policy
+#SBATCH --time=2:00:00                     
+#SBATCH --ntasks=4                         
+#SBATCH --ntasks-per-node=4                   
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=120G                             
-#SBATCH --output=/scratch/user/ajayjagan2511/d1/policy_training/anant_logs/logs/%x_%j.log  
-#SBATCH --gres=gpu:a100:2
+#SBATCH --output=/work/nvme/bdgk/anant/d1/policy_training/anant_logs/logs/%x_%j.log  
+#SBATCH --gres=gpu:4
+#SBATCH --partition=ghx4
+#SBATCH --account=bdgk-dtai-gh
 
 set -euo pipefail
-module purge
-module load WebProxy
-module load CUDA/12.4.0
-module load GCC/11.3.0
-export http_proxy=http://10.73.132.63:8080
-export https_proxy=http://10.73.132.63:8080
 
 # Activate your env before launch if your cluster requires it.
-source /scratch/user/ajayjagan2511/miniconda3/etc/profile.d/conda.sh
-conda activate /scratch/user/ajayjagan2511/miniconda3/envs/d1
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate d1
 
-# In SLURM, BASH_SOURCE[0] may point to a temporary copy under /var/spool,
-# so do not derive repo paths from script location.
-REPO_ROOT="${REPO_ROOT:-/scratch/user/ajayjagan2511/d1}"
+REPO_ROOT="${REPO_ROOT:-/work/nvme/bdgk/anant/d1}"
 WORKDIR="${REPO_ROOT}/policy_training"
 ACCEL_CONFIG="${REPO_ROOT}/diffu-grpo/accelerate.yaml"
-
 TRAIN_CSV="${REPO_ROOT}/dataset/4x4_train_sudoku.csv"
 MODEL_NAME="GSAI-ML/LLaDA-1.5"
 
