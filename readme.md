@@ -22,7 +22,7 @@ This repo runs a **policy-guided remasking** pipeline for Sudoku Solving Task (4
 
 ---
 
-### Demonstration: Run policy training
+### Demonstration: Run policy training and Evaluation
 
 ````bash
 srun --ntasks=1 --nodes=1 --output "${LOGDIR}/train_%j.out" \
