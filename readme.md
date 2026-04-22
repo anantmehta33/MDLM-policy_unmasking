@@ -1,5 +1,7 @@
 # Steering Diffusion Language Models via Policy Learning
 
+We propose a policy-guided diffusion framework for language models, where the remasking process is learned instead of hand-designed. Diffusion-based language models generate sequences by iteratively predicting and remasking tokens, but existing approaches rely on fixed or heuristic strategies that are not optimized for task-specific objectives. We formulate remasking as a sequential decision-making problem, where a learned policy observes per-token features such as token identity, model confidence, entropy, and timestep, and decides which tokens to keep or remask at each step. The policy is trained using reinforcement learning to maximize global rewards, enabling improved constraint satisfaction and sample quality. Importantly, the underlying diffusion model remains frozen, and performance gains are achieved purely through inference-time control.
+
 This repo runs a **policy-guided remasking** pipeline for Sudoku Solving Task (4x4):
 
 1. Train a policy (`train_policy_sudoku.py`)  
