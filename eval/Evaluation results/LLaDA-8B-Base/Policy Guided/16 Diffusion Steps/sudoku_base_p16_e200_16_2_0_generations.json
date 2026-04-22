@@ -615,7 +615,7 @@
     {
       "question": "Solve the following Sudoku puzzle: 0243040000020314",
       "prompt_input": "0243040000020314",
-      "generations": "0243140000024314",
+      "generations": "0243140000020314",
       "ground_truth": "1243342141322314"
     },
     {
@@ -849,7 +849,7 @@
     {
       "question": "Solve the following Sudoku puzzle: 4201130400020100",
       "prompt_input": "4201130400020100",
-      "generations": "4201130401420113",
+      "generations": "4201130421420110",
       "ground_truth": "4231132434122143"
     },
     {
@@ -1593,7 +1593,7 @@
     {
       "question": "Solve the following Sudoku puzzle: 3400103400100103",
       "prompt_input": "3400103400100103",
-      "generations": "3400103400100123",
+      "generations": "3400123400120123",
       "ground_truth": "3421123443122143"
     },
     {
@@ -2979,7 +2979,7 @@
     {
       "question": "Solve the following Sudoku puzzle: 0320024000120034",
       "prompt_input": "0320024000120034",
-      "generations": "0320024000120034",
+      "generations": "0320024300120034",
       "ground_truth": "4321124334122134"
     },
     {

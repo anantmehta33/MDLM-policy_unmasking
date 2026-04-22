@@ -25,7 +25,7 @@ conda activate /scratch/user/ajayjagan2511/miniconda3/envs/d1
 
 # Hardcoded evaluation config for SLURM runs.
 # Update these paths/values directly in this file before submission.
-EVAL_MODE="base_low_confidence"  # options: policy, base_low_confidence
+EVAL_MODE="policy"  # options: policy, base_low_confidence
 
 # Policy sweep config used only when EVAL_MODE=policy.
 POLICY_CKPTS=(
