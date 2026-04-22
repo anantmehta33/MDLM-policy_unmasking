@@ -43,7 +43,6 @@ srun --ntasks=1 --nodes=1 --output "${LOGDIR}/train_%j.out" \
       --device cuda \
       --save_dir "${SAVE_DIR}"
 
-````bash
 CUDA_VISIBLE_DEVICES=$GPU_LIST python -m torch.distributed.run \
   --nproc_per_node $NUM_GPUS \
   --master_port $MASTER_PORT \
