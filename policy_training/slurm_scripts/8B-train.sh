@@ -2,7 +2,7 @@
 
 ##NECESSARY JOB SPECIFICATIONS
 #SBATCH --job-name=run_eval
-#SBATCH --time=2:00:00                     
+#SBATCH --time=6:00:00                     
 #SBATCH --ntasks=4                         
 #SBATCH --ntasks-per-node=4                   
 #SBATCH --cpus-per-task=6
@@ -31,8 +31,8 @@ WORKDIR="${REPO_ROOT}/policy_training"
 ACCEL_CONFIG="${REPO_ROOT}/diffu-grpo/accelerate.yaml"
 
 TRAIN_CSV="${REPO_ROOT}/dataset/4x4_train_sudoku.csv"
-#MODEL_NAME="GSAI-ML/LLaDA-8B-Base"
-MODEL_NAME="GSAI-ML/LLaDA-1.5"
+MODEL_NAME="GSAI-ML/LLaDA-8B-Base"
+#MODEL_NAME="GSAI-ML/LLaDA-1.5"
 
 # Configurable reverse steps for both training and policy-guided inference.
 REVERSE_STEPS=16
