@@ -1,6 +1,0 @@
-LOGDIR=/work/nvme/bdgk/anant/d1/policy_training/slurm/2174792
-WORKDIR=/work/nvme/bdgk/anant/d1/policy_training
-ACCEL_CONFIG=/work/nvme/bdgk/anant/d1/diffu-grpo/accelerate.yaml
-NUM_GPUS=4
-PYTHON=/u/amehta4/miniconda3/envs/d1/bin/python
-Completed training + inference. Check logs under /work/nvme/bdgk/anant/d1/policy_training/slurm/2174792

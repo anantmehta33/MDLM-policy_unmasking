@@ -1,294 +1,0 @@
-[2026-04-07 22:21:59,036] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-W0407 22:22:02.200000 1959359 site-packages/torch/distributed/run.py:792] 
-W0407 22:22:02.200000 1959359 site-packages/torch/distributed/run.py:792] *****************************************
-W0407 22:22:02.200000 1959359 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0407 22:22:02.200000 1959359 site-packages/torch/distributed/run.py:792] *****************************************
-[2026-04-07 22:22:12,263] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,285] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,290] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,298] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,302] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,307] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,315] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2026-04-07 22:22:12,319] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,936] [INFO] [comm.py:658:init_distributed] cdb=None
-[2026-04-07 22:22:13,939] [INFO] [comm.py:658:init_distributed] cdb=None
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-`low_cpu_mem_usage` was None, now default to True since model is quantized.
-Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:   0%|          | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.65s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:27,  5.48s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.63s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.63s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.69s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.65s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.69s/it]Downloading shards:  17%|█▋        | 1/6 [00:05<00:28,  5.63s/it]Downloading shards:  33%|███▎      | 2/6 [00:11<00:24,  6.05s/it]Downloading shards:  33%|███▎      | 2/6 [00:11<00:23,  5.99s/it]Downloading shards:  33%|███▎      | 2/6 [00:11<00:23,  5.99s/it]Downloading shards:  33%|███▎      | 2/6 [00:11<00:24,  6.05s/it]Downloading shards:  33%|███▎      | 2/6 [00:12<00:24,  6.06s/it]Downloading shards:  33%|███▎      | 2/6 [00:12<00:24,  6.06s/it]Downloading shards:  33%|███▎      | 2/6 [00:12<00:24,  6.11s/it]Downloading shards:  33%|███▎      | 2/6 [00:12<00:24,  6.14s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.26s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.25s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.23s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.27s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.24s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.25s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.27s/it]Downloading shards:  50%|█████     | 3/6 [00:18<00:18,  6.30s/it]Downloading shards:  67%|██████▋   | 4/6 [00:24<00:12,  6.36s/it]Downloading shards:  67%|██████▋   | 4/6 [00:24<00:12,  6.34s/it]Downloading shards:  67%|██████▋   | 4/6 [00:24<00:12,  6.34s/it]Downloading shards:  67%|██████▋   | 4/6 [00:25<00:12,  6.33s/it]Downloading shards:  67%|██████▋   | 4/6 [00:24<00:12,  6.33s/it]Downloading shards:  67%|██████▋   | 4/6 [00:25<00:12,  6.37s/it]Downloading shards:  67%|██████▋   | 4/6 [00:25<00:12,  6.37s/it]Downloading shards:  67%|██████▋   | 4/6 [00:25<00:12,  6.38s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.20s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.18s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.18s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.20s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.20s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.20s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.20s/it]Downloading shards:  83%|████████▎ | 5/6 [00:30<00:06,  6.21s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.90s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.03s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.89s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.02s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.90s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.04s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.90s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.04s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.90s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.05s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.91s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.05s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.92s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.05s/it]
-Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  5.93s/it]Downloading shards: 100%|██████████| 6/6 [00:36<00:00,  6.06s/it]
-Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.44s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.43s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.43s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.48s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.49s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.50s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.50s/it]Loading checkpoint shards:  17%|█▋        | 1/6 [00:06<00:32,  6.52s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.91s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.92s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.92s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.94s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.93s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.93s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.94s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:13<00:27,  6.94s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.86s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.86s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.85s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.86s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.88s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.87s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.93s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:20<00:20,  6.95s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.80s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.81s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.81s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.81s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.81s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.81s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.80s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:13,  6.80s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.25s/it]
-Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.25s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.25s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.25s/it]
-
-
-Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.25s/it]
-Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.26s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.26s/it]
-
-Loading checkpoint shards:  67%|██████▋   | 4/6 [00:29<00:14,  7.26s/it]
-[rank3]: Traceback (most recent call last):
-[rank3]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank3]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank3]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank3]:     model = AutoModel.from_pretrained(
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank3]:     return model_class.from_pretrained(
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank3]:     return func(*args, **kwargs)
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank3]:     ) = cls._load_pretrained_model(
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank3]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank3]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank3]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank3]:     return self._quantize(device)
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank3]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank3]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank3]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank5]: Traceback (most recent call last):
-[rank5]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank5]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank5]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank5]:     model = AutoModel.from_pretrained(
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank5]:     return model_class.from_pretrained(
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank5]:     return func(*args, **kwargs)
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank5]:     ) = cls._load_pretrained_model(
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank5]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank5]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank5]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank5]:     return self._quantize(device)
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank5]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank5]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank5]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank2]: Traceback (most recent call last):
-[rank2]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank2]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank2]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank2]:     model = AutoModel.from_pretrained(
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank2]:     return model_class.from_pretrained(
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank2]:     return func(*args, **kwargs)
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank2]:     ) = cls._load_pretrained_model(
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank2]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank2]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank2]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank2]:     return self._quantize(device)
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank2]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank2]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank2]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank6]: Traceback (most recent call last):
-[rank6]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank6]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank6]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank6]:     model = AutoModel.from_pretrained(
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank6]:     return model_class.from_pretrained(
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank6]:     return func(*args, **kwargs)
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank6]:     ) = cls._load_pretrained_model(
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank6]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank6]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank6]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank6]:     return self._quantize(device)
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank6]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank6]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank6]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank0]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank0]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank0]:     model = AutoModel.from_pretrained(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank0]:     return model_class.from_pretrained(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank0]:     return func(*args, **kwargs)
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank0]:     ) = cls._load_pretrained_model(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank0]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank0]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank0]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank0]:     return self._quantize(device)
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank0]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank0]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank0]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank4]: Traceback (most recent call last):
-[rank4]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank4]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank4]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank4]:     model = AutoModel.from_pretrained(
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank4]:     return model_class.from_pretrained(
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank4]:     return func(*args, **kwargs)
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank4]:     ) = cls._load_pretrained_model(
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank4]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank4]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank4]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank4]:     return self._quantize(device)
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank4]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank4]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank4]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank7]: Traceback (most recent call last):
-[rank7]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank7]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank7]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank7]:     model = AutoModel.from_pretrained(
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank7]:     return model_class.from_pretrained(
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank7]:     return func(*args, **kwargs)
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank7]:     ) = cls._load_pretrained_model(
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank7]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank7]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank7]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank7]:     return self._quantize(device)
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank7]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank7]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank7]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Process 1959822 has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank1]: Traceback (most recent call last):
-[rank1]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 125, in <module>
-[rank1]:     main(grpo_config=grpo_config, model_config=model_config)
-[rank1]:   File "/work/nvme/bdgk/anant/d1/diffu-grpo/slurm_scripts/../diffu_grpo_train.py", line 86, in main
-[rank1]:     model = AutoModel.from_pretrained(
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 559, in from_pretrained
-[rank1]:     return model_class.from_pretrained(
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 262, in _wrapper
-[rank1]:     return func(*args, **kwargs)
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4319, in from_pretrained
-[rank1]:     ) = cls._load_pretrained_model(
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4897, in _load_pretrained_model
-[rank1]:     new_error_msgs, offload_index, state_dict_index = _load_state_dict_into_meta_model(
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/modeling_utils.py", line 898, in _load_state_dict_into_meta_model
-[rank1]:     hf_quantizer.create_quantized_param(model, param, param_name, param_device, state_dict, unexpected_keys)
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 242, in create_quantized_param
-[rank1]:     new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 331, in to
-[rank1]:     return self._quantize(device)
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 296, in _quantize
-[rank1]:     w_4bit, quant_state = bnb.functional.quantize_4bit(
-[rank1]:   File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/bitsandbytes/functional.py", line 1212, in quantize_4bit
-[rank1]:     out = torch.zeros(((n + 1) // mod, 1), dtype=quant_storage, device=A.device)
-[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 3.88 MiB is free. Process 1959823 has 4.93 GiB memory in use. Process 1959827 has 4.93 GiB memory in use. Process 1959828 has 4.93 GiB memory in use. Process 1959825 has 4.93 GiB memory in use. Process 1959826 has 4.93 GiB memory in use. Process 1959821 has 4.93 GiB memory in use. Process 1959824 has 4.93 GiB memory in use. Including non-PyTorch memory, this process has 4.93 GiB memory in use. Of the allocated memory 4.29 GiB is allocated by PyTorch, and 161.97 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank6]:[W407 22:23:22.216010197 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank1]:[W407 22:23:22.232310945 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank7]:[W407 22:23:22.287105282 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank3]:[W407 22:23:22.364629353 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank0]:[W407 22:23:22.396176138 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank5]:[W407 22:23:22.463456523 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank4]:[W407 22:23:22.609858045 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-[rank2]:[W407 22:23:22.632394839 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-W0407 22:23:24.054000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959821 closing signal SIGTERM
-W0407 22:23:24.055000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959822 closing signal SIGTERM
-W0407 22:23:24.056000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959823 closing signal SIGTERM
-W0407 22:23:24.056000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959824 closing signal SIGTERM
-W0407 22:23:24.056000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959825 closing signal SIGTERM
-W0407 22:23:24.056000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959826 closing signal SIGTERM
-W0407 22:23:24.056000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1959827 closing signal SIGTERM
-E0407 22:23:24.622000 1959359 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 7 (pid: 1959828) of binary: /u/amehta4/miniconda3/envs/d1/bin/python
-Warning: The cache directory for DeepSpeed Triton autotune, /u/amehta4/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
-Traceback (most recent call last):
-  File "/u/amehta4/miniconda3/envs/d1/bin/accelerate", line 6, in <module>
-    sys.exit(main())
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
-    args.func(args)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1182, in launch_command
-    deepspeed_launcher(args)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/accelerate/commands/launch.py", line 861, in deepspeed_launcher
-    distrib_run.run(args)
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
-    elastic_launch(
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/u/amehta4/miniconda3/envs/d1/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-../diffu_grpo_train.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2026-04-07_22:23:24
-  host      : gpua066.delta.ncsa.illinois.edu
-  rank      : 7 (local_rank: 7)
-  exitcode  : 1 (pid: 1959828)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================

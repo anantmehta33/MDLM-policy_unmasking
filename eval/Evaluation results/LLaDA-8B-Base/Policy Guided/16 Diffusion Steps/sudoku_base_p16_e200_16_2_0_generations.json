@@ -1,0 +1,3016 @@
+{
+  "generations": [
+    {
+      "question": "Solve the following Sudoku puzzle: 3102200002100320",
+      "prompt_input": "3102200002100320",
+      "generations": "3112213202130321",
+      "ground_truth": "3142243142131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0140432014020000",
+      "prompt_input": "0140432014020000",
+      "generations": "2140432014023001",
+      "ground_truth": "2143432114323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4310010000303420",
+      "prompt_input": "4310010000303420",
+      "generations": "4313414044313421",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2004001203201003",
+      "prompt_input": "2004001203201003",
+      "generations": "2334001243201223",
+      "ground_truth": "2134341243211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0024003101000413",
+      "prompt_input": "0024003101000413",
+      "generations": "1124113131322413",
+      "ground_truth": "1324423131422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2013132000400200",
+      "prompt_input": "2013132000400200",
+      "generations": "2013132101413201",
+      "ground_truth": "2413132431424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003300210002431",
+      "prompt_input": "0003300210002431",
+      "generations": "1243310213302431",
+      "ground_truth": "4213314213242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400010002311340",
+      "prompt_input": "0400010002311340",
+      "generations": "3413111312311342",
+      "ground_truth": "2413312442311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3040413004000304",
+      "prompt_input": "3040413004000304",
+      "generations": "3141413344141314",
+      "ground_truth": "3241413224131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100031004211000",
+      "prompt_input": "2100031004211000",
+      "generations": "2111431114211121",
+      "ground_truth": "2143431234211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4020231402001000",
+      "prompt_input": "4020231402001000",
+      "generations": "4121231402001400",
+      "ground_truth": "4123231432411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0031300000422403",
+      "prompt_input": "0031300000422403",
+      "generations": "2231322331422413",
+      "ground_truth": "4231312413422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000241302310100",
+      "prompt_input": "0000241302310100",
+      "generations": "0131241312313121",
+      "ground_truth": "1324241342313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104340140031000",
+      "prompt_input": "0104340140031000",
+      "generations": "3114343144431441",
+      "ground_truth": "2134342142131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103040102340010",
+      "prompt_input": "0103040102340010",
+      "generations": "1123440112340111",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0324041000404030",
+      "prompt_input": "0324041000404030",
+      "generations": "0324041002424132",
+      "ground_truth": "1324241332414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0410034001004230",
+      "prompt_input": "0410034001004230",
+      "generations": "0414234001204234",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0234342040020000",
+      "prompt_input": "0234342040020000",
+      "generations": "4234342343423434",
+      "ground_truth": "1234342143122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003300104302310",
+      "prompt_input": "0003300104302310",
+      "generations": "1123323124332313",
+      "ground_truth": "4123324114322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100400000320214",
+      "prompt_input": "2100400000320214",
+      "generations": "2141412214321214",
+      "ground_truth": "2143432114323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002000021004321",
+      "prompt_input": "3002000021004321",
+      "generations": "3212144321204321",
+      "ground_truth": "3412123421434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2014042040303000",
+      "prompt_input": "2014042040303000",
+      "generations": "2314342142343421",
+      "ground_truth": "2314142341323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0420230000414030",
+      "prompt_input": "0420230000414030",
+      "generations": "1423234000414232",
+      "ground_truth": "1423231432414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400300101202304",
+      "prompt_input": "0400300101202304",
+      "generations": "0412322141202314",
+      "ground_truth": "1432324141232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1400200132100030",
+      "prompt_input": "1400200132100030",
+      "generations": "1413214132141132",
+      "ground_truth": "1423234132144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040031212003400",
+      "prompt_input": "0040031212003400",
+      "generations": "2341031212103421",
+      "ground_truth": "2143431212343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2104031002001400",
+      "prompt_input": "2104031002001400",
+      "generations": "2144031042031420",
+      "ground_truth": "2134431232411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3004000110402410",
+      "prompt_input": "3004000110402410",
+      "generations": "3024100113432410",
+      "ground_truth": "3124423113422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0243300221000300",
+      "prompt_input": "0243300221000300",
+      "generations": "0243300221024301",
+      "ground_truth": "1243341221344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000213412003000",
+      "prompt_input": "4000213412003000",
+      "generations": "4121213412123412",
+      "ground_truth": "4321213412433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0203040003210104",
+      "prompt_input": "0203040003210104",
+      "generations": "1213142243212134",
+      "ground_truth": "1243341243212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0301214300040400",
+      "prompt_input": "0301214300040400",
+      "generations": "4341214310143411",
+      "ground_truth": "4321214312343412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1004401200403400",
+      "prompt_input": "1004401200403400",
+      "generations": "1234431231443400",
+      "ground_truth": "1234431221433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0304012010320001",
+      "prompt_input": "0304012010320001",
+      "generations": "2324312312324111",
+      "ground_truth": "2314412314323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0243001204010004",
+      "prompt_input": "0243001204010004",
+      "generations": "1243111244311224",
+      "ground_truth": "1243431234212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000010002343412",
+      "prompt_input": "0000010002343412",
+      "generations": "2223412312343412",
+      "ground_truth": "4321214312343412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4010203400001240",
+      "prompt_input": "4010203400001240",
+      "generations": "4311243401431241",
+      "ground_truth": "4312213434211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030431230001003",
+      "prompt_input": "0030431230001003",
+      "generations": "1231431231431243",
+      "ground_truth": "2134431232411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0014002001004231",
+      "prompt_input": "0014002001004231",
+      "generations": "2314242311414231",
+      "ground_truth": "2314142331424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103000114320004",
+      "prompt_input": "0103000114320004",
+      "generations": "1143200114320014",
+      "ground_truth": "2143432114323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4001020004100134",
+      "prompt_input": "4001020004100134",
+      "generations": "4201324014120134",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2103300112040000",
+      "prompt_input": "2103300112040000",
+      "generations": "2123340112340010",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1340000020103120",
+      "prompt_input": "1340000020103120",
+      "generations": "1340100120133120",
+      "ground_truth": "1342423124133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0023024120000402",
+      "prompt_input": "0023024120000402",
+      "generations": "2123124124222412",
+      "ground_truth": "4123324123141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030230030200013",
+      "prompt_input": "1030230030200013",
+      "generations": "1331231131233113",
+      "ground_truth": "1432234131244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020003101433400",
+      "prompt_input": "0020003101433400",
+      "generations": "1121123121433421",
+      "ground_truth": "1324423121433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0341413000041000",
+      "prompt_input": "0341413000041000",
+      "generations": "0341413130341413",
+      "ground_truth": "2341413232141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3100201342000040",
+      "prompt_input": "3100201342000040",
+      "generations": "3130201342000142",
+      "ground_truth": "3124241342311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002004100244210",
+      "prompt_input": "0002004100244210",
+      "generations": "1402444120244212",
+      "ground_truth": "1432234131244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0410100001244200",
+      "prompt_input": "0410100001244200",
+      "generations": "2413124401244211",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1002200101240200",
+      "prompt_input": "1002200101240200",
+      "generations": "1212242111242221",
+      "ground_truth": "1342243131244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3020120443000003",
+      "prompt_input": "3020120443000003",
+      "generations": "3123123443222123",
+      "ground_truth": "3421123443122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2010004201004031",
+      "prompt_input": "2010004201004031",
+      "generations": "2311004231104231",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0021200403020240",
+      "prompt_input": "0021200403020240",
+      "generations": "3021212403121242",
+      "ground_truth": "3421213443121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000000123100132",
+      "prompt_input": "1000000123100132",
+      "generations": "1320000123100132",
+      "ground_truth": "1423324123144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3214010000411000",
+      "prompt_input": "3214010000411000",
+      "generations": "3214411314411321",
+      "ground_truth": "3214412323411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0034300143100040",
+      "prompt_input": "0034300143100040",
+      "generations": "0134300143100143",
+      "ground_truth": "2134342143121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1032300003012040",
+      "prompt_input": "1032300003012040",
+      "generations": "1232341223212341",
+      "ground_truth": "1432321443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000304213040031",
+      "prompt_input": "0000304213040031",
+      "generations": "1421314213142131",
+      "ground_truth": "4213314213242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002023020040403",
+      "prompt_input": "3002023020040403",
+      "generations": "3142423123242423",
+      "ground_truth": "3142423123141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0004300103121003",
+      "prompt_input": "0004300103121003",
+      "generations": "1114312103121443",
+      "ground_truth": "2134342143121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040020024103024",
+      "prompt_input": "0040020024103024",
+      "generations": "0241020024103024",
+      "ground_truth": "1342423124133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000420034012004",
+      "prompt_input": "1000420034012004",
+      "generations": "1200420134012004",
+      "ground_truth": "1342421334212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4021213000001200",
+      "prompt_input": "4021213000001200",
+      "generations": "4121213141121213",
+      "ground_truth": "4321213434121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0240001243002004",
+      "prompt_input": "0240001243002004",
+      "generations": "1243021243002104",
+      "ground_truth": "1243341243212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2304000041003041",
+      "prompt_input": "2304000041003041",
+      "generations": "2304000141023141",
+      "ground_truth": "2314142341323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400123420004300",
+      "prompt_input": "0400123420004300",
+      "generations": "3400123421004322",
+      "ground_truth": "3421123421434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4001000430402403",
+      "prompt_input": "4001000430402403",
+      "generations": "4331400430432443",
+      "ground_truth": "4231132431422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000100420013142",
+      "prompt_input": "0000100420013142",
+      "generations": "4210131421013142",
+      "ground_truth": "4213132424313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020304120044030",
+      "prompt_input": "0020304120044030",
+      "generations": "4020344123044132",
+      "ground_truth": "1423324123144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002001324011004",
+      "prompt_input": "0002001324011004",
+      "generations": "1132411324111324",
+      "ground_truth": "3142421324311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2400100042013020",
+      "prompt_input": "2400100042013020",
+      "generations": "2420131242013024",
+      "ground_truth": "2413134242313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4123000100340002",
+      "prompt_input": "4123000100340002",
+      "generations": "4123044120341112",
+      "ground_truth": "4123234112343412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002403020033024",
+      "prompt_input": "0002403020033024",
+      "generations": "3322433324433224",
+      "ground_truth": "1342423124133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3410000040211040",
+      "prompt_input": "3410000040211040",
+      "generations": "3411111341211341",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002423100130020",
+      "prompt_input": "0002423100130020",
+      "generations": "0102423100132424",
+      "ground_truth": "3142423124131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0304023001000412",
+      "prompt_input": "0304023001000412",
+      "generations": "2314123441231412",
+      "ground_truth": "1324423121433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1304000101403010",
+      "prompt_input": "1304000101403010",
+      "generations": "1314130131413013",
+      "ground_truth": "1324423121433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103304100020304",
+      "prompt_input": "0103304100020304",
+      "generations": "0123344120123314",
+      "ground_truth": "4123324114322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0431012012400000",
+      "prompt_input": "0431012012400000",
+      "generations": "2431212312431111",
+      "ground_truth": "2431312412434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2004410010033020",
+      "prompt_input": "2004410010033020",
+      "generations": "2334412012233424",
+      "ground_truth": "2314413212433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100200104033210",
+      "prompt_input": "0100200104033210",
+      "generations": "0133200114133210",
+      "ground_truth": "4132234114233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100402134001030",
+      "prompt_input": "0100402134001030",
+      "generations": "2130432134021230",
+      "ground_truth": "2143432134121234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003000034212130",
+      "prompt_input": "0003000034212130",
+      "generations": "1213412134212134",
+      "ground_truth": "4213134234212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000423103002003",
+      "prompt_input": "3000423103002003",
+      "generations": "3130423123442423",
+      "ground_truth": "3124423113422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010010203011023",
+      "prompt_input": "0010010203011023",
+      "generations": "2111111233111123",
+      "ground_truth": "3214413223411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1300400024300102",
+      "prompt_input": "1300400024300102",
+      "generations": "1342401324340132",
+      "ground_truth": "1324421324313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0432201000010023",
+      "prompt_input": "0432201000010023",
+      "generations": "1432231432314323",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030402010433010",
+      "prompt_input": "0030402010433010",
+      "generations": "1031402010433412",
+      "ground_truth": "2134432112433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4301010412030000",
+      "prompt_input": "4301010412030000",
+      "generations": "4321312412430002",
+      "ground_truth": "4321213412433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2310000230404020",
+      "prompt_input": "2310000230404020",
+      "generations": "2314100231414123",
+      "ground_truth": "2314143232414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0412100040202100",
+      "prompt_input": "0412100040202100",
+      "generations": "1412121141212114",
+      "ground_truth": "3412124343212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0140043100100024",
+      "prompt_input": "0140043100100024",
+      "generations": "0143243100103124",
+      "ground_truth": "3142243142131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003302413004001",
+      "prompt_input": "0003302413004001",
+      "generations": "1003312413124131",
+      "ground_truth": "2413312413424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103002012300310",
+      "prompt_input": "0103002012300310",
+      "generations": "3123012312310312",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4132300000410400",
+      "prompt_input": "4132300000410400",
+      "generations": "4132300000413413",
+      "ground_truth": "4132321423411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020023043002043",
+      "prompt_input": "0020023043002043",
+      "generations": "3020023443202343",
+      "ground_truth": "3421123443122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3102003142000300",
+      "prompt_input": "3102003142000300",
+      "generations": "3142003142000310",
+      "ground_truth": "3142243142131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0102031002010023",
+      "prompt_input": "0102031002010023",
+      "generations": "3112231222311223",
+      "ground_truth": "4132231432411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3204003020001023",
+      "prompt_input": "3204003020001023",
+      "generations": "3234223124221323",
+      "ground_truth": "3214413223411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200314013240000",
+      "prompt_input": "0200314013240000",
+      "generations": "3241314313241133",
+      "ground_truth": "4213314213242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0430102002103100",
+      "prompt_input": "0430102002103100",
+      "generations": "0432132432143140",
+      "ground_truth": "2431132442133142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0243040000020314",
+      "prompt_input": "0243040000020314",
+      "generations": "0243140000020314",
+      "ground_truth": "1243342141322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0004000003414123",
+      "prompt_input": "0004000003414123",
+      "generations": "3114123123414123",
+      "ground_truth": "1234341223414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3014002020004130",
+      "prompt_input": "3014002020004130",
+      "generations": "3414112121114132",
+      "ground_truth": "3214142323414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2013010200300320",
+      "prompt_input": "2013010200300320",
+      "generations": "2013013201301321",
+      "ground_truth": "2413314242311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003030032404102",
+      "prompt_input": "0003030032404102",
+      "generations": "2223234132434132",
+      "ground_truth": "1423231432414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3010410014032000",
+      "prompt_input": "3010410014032000",
+      "generations": "3214413014432011",
+      "ground_truth": "3214413214232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4300014030010230",
+      "prompt_input": "4300014030010230",
+      "generations": "4310014230014230",
+      "ground_truth": "4312214334211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400210010004301",
+      "prompt_input": "3400210010004301",
+      "generations": "3430213012234321",
+      "ground_truth": "3412213412434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000203010004213",
+      "prompt_input": "3000203010004213",
+      "generations": "3234213213234213",
+      "ground_truth": "3142243113244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3021003040100340",
+      "prompt_input": "3021003040100340",
+      "generations": "3421103342100340",
+      "ground_truth": "3421213442131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0310214000010230",
+      "prompt_input": "0310214000010230",
+      "generations": "2314214211314231",
+      "ground_truth": "4312214334211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103230100003204",
+      "prompt_input": "0103230100003204",
+      "generations": "0123234140123204",
+      "ground_truth": "4123234114323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0430200140003024",
+      "prompt_input": "0430200140003024",
+      "generations": "2432240143103124",
+      "ground_truth": "1432234142133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3124040010000201",
+      "prompt_input": "3124040010000201",
+      "generations": "3124140312431231",
+      "ground_truth": "3124241313424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1020030030104102",
+      "prompt_input": "1020030030104102",
+      "generations": "1321131134134112",
+      "ground_truth": "1423234132144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000302403401032",
+      "prompt_input": "0000302403401032",
+      "generations": "2211322423421432",
+      "ground_truth": "4213312423411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4301000304120004",
+      "prompt_input": "4301000304120004",
+      "generations": "4341004344124334",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000104343020130",
+      "prompt_input": "0000104343020130",
+      "generations": "3000104343020130",
+      "ground_truth": "3421124343122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0013100000023241",
+      "prompt_input": "0013100000023241",
+      "generations": "1213141112123241",
+      "ground_truth": "2413132441323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0203100234000104",
+      "prompt_input": "0203100234000104",
+      "generations": "0233100234100124",
+      "ground_truth": "4213134234212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104003113020003",
+      "prompt_input": "0104003113020003",
+      "generations": "3114123113123113",
+      "ground_truth": "3124423113422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4321120004030000",
+      "prompt_input": "4321120004030000",
+      "generations": "4321120024032112",
+      "ground_truth": "4321123424133142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0204032001400402",
+      "prompt_input": "0204032001400402",
+      "generations": "0204032021400402",
+      "ground_truth": "1234432121433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0431100000133004",
+      "prompt_input": "0431100000133004",
+      "generations": "0431100043133004",
+      "ground_truth": "2431134242133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4030000204103104",
+      "prompt_input": "4030000204103104",
+      "generations": "4030134234103124",
+      "ground_truth": "4231134224133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0413030000404130",
+      "prompt_input": "0413030000404130",
+      "generations": "1413130000414131",
+      "ground_truth": "2413132432414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020031031004031",
+      "prompt_input": "0020031031004031",
+      "generations": "1024031031024031",
+      "ground_truth": "1423231431424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1020031400303100",
+      "prompt_input": "1020031400303100",
+      "generations": "1423131422313142",
+      "ground_truth": "1423231442313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200302143000034",
+      "prompt_input": "0200302143000034",
+      "generations": "4214342143421434",
+      "ground_truth": "1243342143122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2301102340000004",
+      "prompt_input": "2301102340000004",
+      "generations": "2341112341112234",
+      "ground_truth": "2341142341323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4030312400020400",
+      "prompt_input": "4030312400020400",
+      "generations": "4032312403120420",
+      "ground_truth": "4231312413422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4020301404020001",
+      "prompt_input": "4020301404020001",
+      "generations": "4020301414020301",
+      "ground_truth": "4123321414322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000042340002301",
+      "prompt_input": "3000042340002301",
+      "generations": "3410042341042341",
+      "ground_truth": "3214142341322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4020031032000430",
+      "prompt_input": "4020031032000430",
+      "generations": "4320031432331432",
+      "ground_truth": "4123231432411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1340020031040003",
+      "prompt_input": "1340020031040003",
+      "generations": "1341023031342023",
+      "ground_truth": "1342423131242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030041003002103",
+      "prompt_input": "1030041003002103",
+      "generations": "1233141133142113",
+      "ground_truth": "1234341243212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400123403100000",
+      "prompt_input": "3400123403100000",
+      "generations": "3423123423123423",
+      "ground_truth": "3421123443122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030300203004023",
+      "prompt_input": "1030300203004023",
+      "generations": "1232301233204023",
+      "ground_truth": "1234341223414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000342140000104",
+      "prompt_input": "1000342140000104",
+      "generations": "1441342141342134",
+      "ground_truth": "1243342143122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4201130400020100",
+      "prompt_input": "4201130400020100",
+      "generations": "4201130421420110",
+      "ground_truth": "4231132434122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2040403204200200",
+      "prompt_input": "2040403204200200",
+      "generations": "2142423214214242",
+      "ground_truth": "2341413214233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4201030200030104",
+      "prompt_input": "4201030200030104",
+      "generations": "4211434211432114",
+      "ground_truth": "4231134224133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0012013440001003",
+      "prompt_input": "0012013440001003",
+      "generations": "0012313440231203",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1400320001230300",
+      "prompt_input": "1400320001230300",
+      "generations": "1432321001234320",
+      "ground_truth": "1432324141232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000013032141003",
+      "prompt_input": "0000013032141003",
+      "generations": "1121413132141313",
+      "ground_truth": "2341413232141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0032204000033204",
+      "prompt_input": "0032204000033204",
+      "generations": "0332244000033224",
+      "ground_truth": "1432234141233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000324010002403",
+      "prompt_input": "4000324010002403",
+      "generations": "4131324313332413",
+      "ground_truth": "4132324113242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1203001020300021",
+      "prompt_input": "1203001020300021",
+      "generations": "1213121121311121",
+      "ground_truth": "1243341221344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200341040200104",
+      "prompt_input": "0200341040200104",
+      "generations": "1211341241234134",
+      "ground_truth": "1243341243212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000403202100023",
+      "prompt_input": "2000403202100023",
+      "generations": "2321423232142323",
+      "ground_truth": "2341413232141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1430030000400123",
+      "prompt_input": "1430030000400123",
+      "generations": "1431030230430123",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2043030202040001",
+      "prompt_input": "2043030202040001",
+      "generations": "2143231212343231",
+      "ground_truth": "2143431212343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2430004002100320",
+      "prompt_input": "2430004002100320",
+      "generations": "2432024002124320",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0231010013002010",
+      "prompt_input": "0231010013002010",
+      "generations": "1231312313112313",
+      "ground_truth": "4231312413422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002200034211200",
+      "prompt_input": "0002200034211200",
+      "generations": "1002201234211203",
+      "ground_truth": "4132231434211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002020440002143",
+      "prompt_input": "0002020440002143",
+      "generations": "4002120444002143",
+      "ground_truth": "1432321443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2041410000003210",
+      "prompt_input": "2041410000003210",
+      "generations": "2141414122123214",
+      "ground_truth": "2341413214233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4002234000200204",
+      "prompt_input": "4002234000200204",
+      "generations": "4222234224232234",
+      "ground_truth": "4132234114233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040243010240003",
+      "prompt_input": "0040243010240003",
+      "generations": "3243243213243243",
+      "ground_truth": "3142243113244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320004304020130",
+      "prompt_input": "0320004304020130",
+      "generations": "4321124324324132",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3102000140000324",
+      "prompt_input": "3102000140000324",
+      "generations": "3142000142200324",
+      "ground_truth": "3142243142131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0402023440002100",
+      "prompt_input": "0402023440002100",
+      "generations": "3432123442222124",
+      "ground_truth": "3412123443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4200102001022400",
+      "prompt_input": "4200102001022400",
+      "generations": "4241122241122424",
+      "ground_truth": "4231132431422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030004224130020",
+      "prompt_input": "0030004224130020",
+      "generations": "4131224224131224",
+      "ground_truth": "4231134224133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040401201200031",
+      "prompt_input": "0040401201200031",
+      "generations": "1241431201201231",
+      "ground_truth": "1243431231242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2040040002104130",
+      "prompt_input": "2040040002104130",
+      "generations": "2140040002104130",
+      "ground_truth": "2341142332144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010023403400023",
+      "prompt_input": "0010023403400023",
+      "generations": "3412123423412123",
+      "ground_truth": "3412123423414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1420000401020201",
+      "prompt_input": "1420000401020201",
+      "generations": "1420000421020201",
+      "ground_truth": "1423231431424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0402014003011004",
+      "prompt_input": "0402014003011004",
+      "generations": "1432014403011014",
+      "ground_truth": "3412214343211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0203041001000321",
+      "prompt_input": "0203041001000321",
+      "generations": "1213141321221321",
+      "ground_truth": "1243341221344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010040201404021",
+      "prompt_input": "0010040201404021",
+      "generations": "2014040211404021",
+      "ground_truth": "3214143221434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0430020123100100",
+      "prompt_input": "0430020123100100",
+      "generations": "1431123123123123",
+      "ground_truth": "1432324123144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0302210404010200",
+      "prompt_input": "0302210404010200",
+      "generations": "1312212424212221",
+      "ground_truth": "4312213434211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0021200310303010",
+      "prompt_input": "0021200310303010",
+      "generations": "1121211312313313",
+      "ground_truth": "4321214314323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100400034210004",
+      "prompt_input": "2100400034210004",
+      "generations": "2133421134212334",
+      "ground_truth": "2143431234211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000003202014123",
+      "prompt_input": "0000003202014123",
+      "generations": "2014023212314123",
+      "ground_truth": "2314143232414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100034014030210",
+      "prompt_input": "0100034014030210",
+      "generations": "4134134014134214",
+      "ground_truth": "4132234114233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4103021400400030",
+      "prompt_input": "4103021400400030",
+      "generations": "4103121431420430",
+      "ground_truth": "4123321413422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000013200030214",
+      "prompt_input": "2000013200030214",
+      "generations": "2132213222132214",
+      "ground_truth": "2341413214233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0204140200202040",
+      "prompt_input": "0204140200202040",
+      "generations": "0214143212212141",
+      "ground_truth": "3214143241232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2301000332004002",
+      "prompt_input": "2301000332004002",
+      "generations": "2321222332114332",
+      "ground_truth": "2341142332144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0420320020010032",
+      "prompt_input": "0420320020010032",
+      "generations": "2420324320010232",
+      "ground_truth": "1423321423414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002210302300420",
+      "prompt_input": "0002210302300420",
+      "generations": "1222212322312422",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010000410034321",
+      "prompt_input": "0010000410034321",
+      "generations": "0012023412134321",
+      "ground_truth": "3412213412434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2400004200244030",
+      "prompt_input": "2400004200244030",
+      "generations": "2440234200244030",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2040040001033204",
+      "prompt_input": "2040040001033204",
+      "generations": "2340243001033234",
+      "ground_truth": "2341143241233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3004010220001023",
+      "prompt_input": "3004010220001023",
+      "generations": "3224313223401323",
+      "ground_truth": "3214413223411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4020020024000342",
+      "prompt_input": "4020020024000342",
+      "generations": "4223423424042342",
+      "ground_truth": "4123321424311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0312004024010100",
+      "prompt_input": "0312004024010100",
+      "generations": "0312104124313121",
+      "ground_truth": "4312124324313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1430000140230200",
+      "prompt_input": "1430000140230200",
+      "generations": "1432232143231231",
+      "ground_truth": "1432234141233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020423101002400",
+      "prompt_input": "0020423101002400",
+      "generations": "1124423121242423",
+      "ground_truth": "1324423131422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1042000001044031",
+      "prompt_input": "1042000001044031",
+      "generations": "1442310001144231",
+      "ground_truth": "1342241331244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4010000224011004",
+      "prompt_input": "4010000224011004",
+      "generations": "4311211224111224",
+      "ground_truth": "4213314224311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4031000200200314",
+      "prompt_input": "4031000200200314",
+      "generations": "4131431243241314",
+      "ground_truth": "4231314214232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030200032140023",
+      "prompt_input": "0030200032140023",
+      "generations": "0031201432143023",
+      "ground_truth": "1432234132144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4301003412000002",
+      "prompt_input": "4301003412000002",
+      "generations": "4341023412030402",
+      "ground_truth": "4321213412433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200410203001403",
+      "prompt_input": "0200410203001403",
+      "generations": "3200410213401403",
+      "ground_truth": "3241413223141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4030020004030314",
+      "prompt_input": "4030020004030314",
+      "generations": "4331324314232314",
+      "ground_truth": "4132324114232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2003002010304310",
+      "prompt_input": "2003002010304310",
+      "generations": "2143112312314312",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400014300010024",
+      "prompt_input": "3400014300010024",
+      "generations": "3400014324014324",
+      "ground_truth": "3412214342311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1234000000003412",
+      "prompt_input": "1234000000003412",
+      "generations": "1234123434123412",
+      "ground_truth": "1234432121433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4021000001430012",
+      "prompt_input": "4021000001430012",
+      "generations": "4321120001432112",
+      "ground_truth": "4321123421433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1024241300000001",
+      "prompt_input": "1024241300000001",
+      "generations": "1324241324111241",
+      "ground_truth": "1324241341323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4010120000300124",
+      "prompt_input": "4010120000300124",
+      "generations": "4310124324310124",
+      "ground_truth": "4312124324313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030002103022043",
+      "prompt_input": "0030002103022043",
+      "generations": "2431222143122143",
+      "ground_truth": "1234342143122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2043340003200030",
+      "prompt_input": "2043340003200030",
+      "generations": "2343342343244434",
+      "ground_truth": "2143341243211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030341200000321",
+      "prompt_input": "0030341200000321",
+      "generations": "1232341230334321",
+      "ground_truth": "1234341221434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0043032030102030",
+      "prompt_input": "0043032030102030",
+      "generations": "3243132433132431",
+      "ground_truth": "1243432134122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0001034024030104",
+      "prompt_input": "0001034024030104",
+      "generations": "0001034124234124",
+      "ground_truth": "4231134224133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400201032400023",
+      "prompt_input": "0400201032400023",
+      "generations": "2403231032410123",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4200034001200403",
+      "prompt_input": "4200034001200403",
+      "generations": "4231234201230423",
+      "ground_truth": "4231134231242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4020124300120000",
+      "prompt_input": "4020124300120000",
+      "generations": "4320124320124320",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030324141000010",
+      "prompt_input": "0030324141000010",
+      "generations": "1231324141010314",
+      "ground_truth": "1432324141232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3200010220140020",
+      "prompt_input": "3200010220140020",
+      "generations": "3220413220140221",
+      "ground_truth": "3241413223141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3241042020000300",
+      "prompt_input": "3241042020000300",
+      "generations": "3241242324104320",
+      "ground_truth": "3241142321344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1324200031000200",
+      "prompt_input": "1324200031000200",
+      "generations": "1324211231324201",
+      "ground_truth": "1324243131424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0302010300343001",
+      "prompt_input": "0302010300343001",
+      "generations": "4342111322343021",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400130200044230",
+      "prompt_input": "0400130200044230",
+      "generations": "2402130230144230",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0402000021034021",
+      "prompt_input": "0402000021034021",
+      "generations": "3432114321234021",
+      "ground_truth": "3412123421434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1020301400002340",
+      "prompt_input": "1020301400002340",
+      "generations": "1122341421112341",
+      "ground_truth": "1423321441322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2003004200201204",
+      "prompt_input": "2003004200201204",
+      "generations": "2013214201201234",
+      "ground_truth": "2413314243211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0240400323000402",
+      "prompt_input": "0240400323000402",
+      "generations": "3243424323422432",
+      "ground_truth": "3241412323141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1003001001322040",
+      "prompt_input": "1003001001322040",
+      "generations": "1313001101322041",
+      "ground_truth": "1423321441322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0230002024001302",
+      "prompt_input": "0230002024001302",
+      "generations": "0230012024001302",
+      "ground_truth": "4231312424131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2014000032410400",
+      "prompt_input": "2014000032410400",
+      "generations": "2414400032414400",
+      "ground_truth": "2314412332411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000014242101004",
+      "prompt_input": "0000014242101004",
+      "generations": "2421014242101424",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0031104220033000",
+      "prompt_input": "0031104220033000",
+      "generations": "2431104223433013",
+      "ground_truth": "4231134224133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2400012003024200",
+      "prompt_input": "2400012003024200",
+      "generations": "2423012423124240",
+      "ground_truth": "2413312413424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2034001210203000",
+      "prompt_input": "2034001210203000",
+      "generations": "2034001210243012",
+      "ground_truth": "2134431214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020400031400431",
+      "prompt_input": "0020400031400431",
+      "generations": "1420431431420431",
+      "ground_truth": "1324421331422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2400000042311040",
+      "prompt_input": "2400000042311040",
+      "generations": "2413012242311040",
+      "ground_truth": "2413312442311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0300002030410432",
+      "prompt_input": "0300002030410432",
+      "generations": "4324412432412432",
+      "ground_truth": "2314412332411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000004132044032",
+      "prompt_input": "0000004132044032",
+      "generations": "4132044132044132",
+      "ground_truth": "1423234132144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0142000013040013",
+      "prompt_input": "0142000013040013",
+      "generations": "0142440013140013",
+      "ground_truth": "3142243113244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0412200010044020",
+      "prompt_input": "0412200010044020",
+      "generations": "4412200012344122",
+      "ground_truth": "3412214312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000100241030014",
+      "prompt_input": "2000100241030014",
+      "generations": "2114143241432414",
+      "ground_truth": "2431134241233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3042200000340320",
+      "prompt_input": "3042200000340320",
+      "generations": "3442232002342324",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000003101044210",
+      "prompt_input": "1000003101044210",
+      "generations": "1110443111044211",
+      "ground_truth": "1342243131244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020204032101400",
+      "prompt_input": "0020204032101400",
+      "generations": "1321214132121423",
+      "ground_truth": "4123234132141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0001140200240013",
+      "prompt_input": "0001140200240013",
+      "generations": "0201140200240013",
+      "ground_truth": "2341143231244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0042000302311020",
+      "prompt_input": "0042000302311020",
+      "generations": "1242311342311423",
+      "ground_truth": "3142241342311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000204012304300",
+      "prompt_input": "3000204012304300",
+      "generations": "3431234312304322",
+      "ground_truth": "3412214312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0341402014000010",
+      "prompt_input": "0341402014000010",
+      "generations": "0341412014023414",
+      "ground_truth": "2341412314323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2031000002130042",
+      "prompt_input": "2031000002130042",
+      "generations": "2131242142131142",
+      "ground_truth": "2431132442133142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030301210400301",
+      "prompt_input": "0030301210400301",
+      "generations": "1431321213431321",
+      "ground_truth": "2134341212434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3100421300001002",
+      "prompt_input": "3100421300001002",
+      "generations": "3121421341001342",
+      "ground_truth": "3124421323411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3142041300004000",
+      "prompt_input": "3142041300004000",
+      "generations": "3142141311314211",
+      "ground_truth": "3142241313244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000020130022103",
+      "prompt_input": "1000020130022103",
+      "generations": "1030221133022113",
+      "ground_truth": "1324423134122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000003040211043",
+      "prompt_input": "3000003040211043",
+      "generations": "3211243143211243",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1342400020303000",
+      "prompt_input": "1342400020303000",
+      "generations": "1342400021313424",
+      "ground_truth": "1342421324313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0230104230202000",
+      "prompt_input": "0230104230202000",
+      "generations": "4232124230242322",
+      "ground_truth": "4231134231242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1200002024100102",
+      "prompt_input": "1200002024100102",
+      "generations": "1241112124122112",
+      "ground_truth": "1234432124133142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0004020104101340",
+      "prompt_input": "0004020104101340",
+      "generations": "0134120134101341",
+      "ground_truth": "3124423124131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0310000420030421",
+      "prompt_input": "0310000420030421",
+      "generations": "4310031421031421",
+      "ground_truth": "4312123421433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0342040301204000",
+      "prompt_input": "0342040301204000",
+      "generations": "2342342341234234",
+      "ground_truth": "1342241331244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000204303101200",
+      "prompt_input": "3000204303101200",
+      "generations": "3111234323131234",
+      "ground_truth": "3421214343121234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4023300410020001",
+      "prompt_input": "4023300410020001",
+      "generations": "4123312412123341",
+      "ground_truth": "4123321413422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100300000311304",
+      "prompt_input": "2100300000311304",
+      "generations": "2100300010311334",
+      "ground_truth": "2143341242311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2430010240001004",
+      "prompt_input": "2430010240001004",
+      "generations": "2430010244001024",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2401304040031000",
+      "prompt_input": "2401304040031000",
+      "generations": "2431314242131424",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0042040000244230",
+      "prompt_input": "0042040000244230",
+      "generations": "2442342344244234",
+      "ground_truth": "3142241313244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0004040240003241",
+      "prompt_input": "0004040240003241",
+      "generations": "3324143241433241",
+      "ground_truth": "2314143241233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1200300100302310",
+      "prompt_input": "1200300100302310",
+      "generations": "1232312122312312",
+      "ground_truth": "1243342141322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400103400100103",
+      "prompt_input": "3400103400100103",
+      "generations": "3400123400120123",
+      "ground_truth": "3421123443122143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4123000030401030",
+      "prompt_input": "4123000030401030",
+      "generations": "4123401231401234",
+      "ground_truth": "4123231432411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0412020021300001",
+      "prompt_input": "0412020021300001",
+      "generations": "2412124121311121",
+      "ground_truth": "3412124321344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0301042340003200",
+      "prompt_input": "0301042340003200",
+      "generations": "2321342341323214",
+      "ground_truth": "2341142341323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1200042100100032",
+      "prompt_input": "1200042100100032",
+      "generations": "1231142122124132",
+      "ground_truth": "1243342123144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1002001001242400",
+      "prompt_input": "1002001001242400",
+      "generations": "1242401201242401",
+      "ground_truth": "1342421331242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3040403020140003",
+      "prompt_input": "3040403020140003",
+      "generations": "3242433323142423",
+      "ground_truth": "3241413223141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0431030200000213",
+      "prompt_input": "0431030200000213",
+      "generations": "1431231211343213",
+      "ground_truth": "2431134231244213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1402300421004000",
+      "prompt_input": "1402300421004000",
+      "generations": "1442311421414222",
+      "ground_truth": "1432321421434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2031100001404003",
+      "prompt_input": "2031100001404003",
+      "generations": "2131132331414203",
+      "ground_truth": "2431132431424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030401020003420",
+      "prompt_input": "1030401020003420",
+      "generations": "1232421321423421",
+      "ground_truth": "1234431221433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0210030024013100",
+      "prompt_input": "0210030024013100",
+      "generations": "1210131124013112",
+      "ground_truth": "4213132424313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0340003032044100",
+      "prompt_input": "0340003032044100",
+      "generations": "2341423432344142",
+      "ground_truth": "1342243132144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0032300010032310",
+      "prompt_input": "0032300010032310",
+      "generations": "1132312313232312",
+      "ground_truth": "4132324114232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2400310202000024",
+      "prompt_input": "2400310202000024",
+      "generations": "2422310242431024",
+      "ground_truth": "2413314242311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040000320344012",
+      "prompt_input": "0040000320344012",
+      "generations": "3443121321344312",
+      "ground_truth": "3241142321344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030040101034002",
+      "prompt_input": "1030040101034002",
+      "generations": "1234142121234142",
+      "ground_truth": "1234342121434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000030204233201",
+      "prompt_input": "0000030204233201",
+      "generations": "2224233234233231",
+      "ground_truth": "2134431214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010002303410130",
+      "prompt_input": "0010002303410130",
+      "generations": "1413112313412132",
+      "ground_truth": "3214142323414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1302020024033000",
+      "prompt_input": "1302020024033000",
+      "generations": "1312323324233222",
+      "ground_truth": "1342423124133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3014010300400031",
+      "prompt_input": "3014010300400031",
+      "generations": "3114312311431231",
+      "ground_truth": "3214412313422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3142200010000021",
+      "prompt_input": "3142200010000021",
+      "generations": "3142211314221421",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1432000400014020",
+      "prompt_input": "1432000400014020",
+      "generations": "1432001432014320",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4321204000000204",
+      "prompt_input": "4321204000000204",
+      "generations": "4321204000321234",
+      "ground_truth": "4321214334121234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4203304200310000",
+      "prompt_input": "4203304200310000",
+      "generations": "4213314213314223",
+      "ground_truth": "4213314224311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3100420024130000",
+      "prompt_input": "3100420024130000",
+      "generations": "3122421324131422",
+      "ground_truth": "3124423124131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100400110042013",
+      "prompt_input": "0100400110042013",
+      "generations": "1131421113142113",
+      "ground_truth": "3142423113242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000214310300020",
+      "prompt_input": "4000214310300020",
+      "generations": "4310214310314120",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4100201410300200",
+      "prompt_input": "4100201410300200",
+      "generations": "4100201412310201",
+      "ground_truth": "4123231414323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2030034002100120",
+      "prompt_input": "2030034002100120",
+      "generations": "2130234112100120",
+      "ground_truth": "2431134232144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0413000013024001",
+      "prompt_input": "0413000013024001",
+      "generations": "2413122413124141",
+      "ground_truth": "2413312413424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1423020100020010",
+      "prompt_input": "1423020100020010",
+      "generations": "1423120142423214",
+      "ground_truth": "1423324141322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002200300201034",
+      "prompt_input": "3002200300201034",
+      "generations": "3412212341231234",
+      "ground_truth": "3142241343211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4010214300010004",
+      "prompt_input": "4010214300010004",
+      "generations": "4314214314214214",
+      "ground_truth": "4312214334211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4213002410000040",
+      "prompt_input": "4213002410000040",
+      "generations": "4213002410022240",
+      "ground_truth": "4213312414322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020020104302304",
+      "prompt_input": "0020020104302304",
+      "generations": "3123123144322314",
+      "ground_truth": "4123324114322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0023030400424200",
+      "prompt_input": "0023030400424200",
+      "generations": "2323232422424242",
+      "ground_truth": "1423231431424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0213032030000430",
+      "prompt_input": "0213032030000430",
+      "generations": "0213432132302432",
+      "ground_truth": "4213132431422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002203040011040",
+      "prompt_input": "3002203040011040",
+      "generations": "3102213042011240",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000104040233010",
+      "prompt_input": "2000104040233010",
+      "generations": "2032134141233011",
+      "ground_truth": "2431134241233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1300020300300142",
+      "prompt_input": "1300020300300142",
+      "generations": "1321421311312142",
+      "ground_truth": "1324421324313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030321040210040",
+      "prompt_input": "0030321040210040",
+      "generations": "2034321040213043",
+      "ground_truth": "1432321443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0001304010042403",
+      "prompt_input": "0001304010042403",
+      "generations": "4001314213042403",
+      "ground_truth": "4231314213242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320400031400430",
+      "prompt_input": "0320400031400430",
+      "generations": "4321430331421432",
+      "ground_truth": "1324421331422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400312440001040",
+      "prompt_input": "0400312440001040",
+      "generations": "4400312440031244",
+      "ground_truth": "2413312442311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104000210004321",
+      "prompt_input": "0104000210004321",
+      "generations": "2114323211414321",
+      "ground_truth": "2134341212434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0004001021403401",
+      "prompt_input": "0004001021403401",
+      "generations": "1214231121423421",
+      "ground_truth": "1234431221433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030302040120240",
+      "prompt_input": "0030302040120240",
+      "generations": "2431312243121243",
+      "ground_truth": "2134342143121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2134300000420003",
+      "prompt_input": "2134300000420003",
+      "generations": "2134343210424213",
+      "ground_truth": "2134342113424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2310413200000040",
+      "prompt_input": "2310413200000040",
+      "generations": "2312413231131241",
+      "ground_truth": "2314413214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010020321300021",
+      "prompt_input": "0010020321300021",
+      "generations": "2213321321321321",
+      "ground_truth": "4312124321343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000102301020230",
+      "prompt_input": "2000102301020230",
+      "generations": "2310122331023231",
+      "ground_truth": "2314142331424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000000112304012",
+      "prompt_input": "2000000112304012",
+      "generations": "2314324112314112",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200003214230300",
+      "prompt_input": "0200003214230300",
+      "generations": "0214303214230302",
+      "ground_truth": "3214413214232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1020000100144032",
+      "prompt_input": "1020000100144032",
+      "generations": "1320120120144132",
+      "ground_truth": "1423234132144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040040342013004",
+      "prompt_input": "0040040342013004",
+      "generations": "1342341342313234",
+      "ground_truth": "1342241342313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0103200002011430",
+      "prompt_input": "0103200002011430",
+      "generations": "1143211032111432",
+      "ground_truth": "4123231432411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000340103120034",
+      "prompt_input": "0000340103120034",
+      "generations": "1212340123123134",
+      "ground_truth": "1243342143122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1200300021034010",
+      "prompt_input": "1200300021034010",
+      "generations": "1212340121234012",
+      "ground_truth": "1234342121434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4130030104030010",
+      "prompt_input": "4130030104030010",
+      "generations": "4134134134134013",
+      "ground_truth": "4132234114233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4100230030140400",
+      "prompt_input": "4100230030140400",
+      "generations": "4141231234141412",
+      "ground_truth": "4132234132141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320001320013002",
+      "prompt_input": "0320001320013002",
+      "generations": "1321321321213232",
+      "ground_truth": "1324421324313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4010132020013000",
+      "prompt_input": "4010132020013000",
+      "generations": "4213132421013242",
+      "ground_truth": "4213132424313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0403304210040001",
+      "prompt_input": "0403304210040001",
+      "generations": "0423304210042331",
+      "ground_truth": "2413314212344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000001334212004",
+      "prompt_input": "0000001334212004",
+      "generations": "1042021334212134",
+      "ground_truth": "1342421334212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0041043003140003",
+      "prompt_input": "0041043003140003",
+      "generations": "3141143143141143",
+      "ground_truth": "3241143223144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000314040000324",
+      "prompt_input": "2000314040000324",
+      "generations": "2400314242000324",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3200010000411023",
+      "prompt_input": "3200010000411023",
+      "generations": "3234111233411323",
+      "ground_truth": "3214413223411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1042040300313000",
+      "prompt_input": "1042040300313000",
+      "generations": "1342141312313421",
+      "ground_truth": "1342241342313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0120000124031300",
+      "prompt_input": "0120000124031300",
+      "generations": "3124103124131311",
+      "ground_truth": "3124423124131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1003302120040100",
+      "prompt_input": "1003302120040100",
+      "generations": "1223342123342122",
+      "ground_truth": "1243342123144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2104001243000003",
+      "prompt_input": "2104001243000003",
+      "generations": "2134301243201243",
+      "ground_truth": "2134341243211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0102230430001003",
+      "prompt_input": "0102230430001003",
+      "generations": "0112231430011223",
+      "ground_truth": "4132231434211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1400020000202341",
+      "prompt_input": "1400020000202341",
+      "generations": "1423123414212341",
+      "ground_truth": "1432321441232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000312420000340",
+      "prompt_input": "4000312420000340",
+      "generations": "4200312423012342",
+      "ground_truth": "4213312424311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3120400324000002",
+      "prompt_input": "3120400324000002",
+      "generations": "3120400324004012",
+      "ground_truth": "3124421324311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3140001300304020",
+      "prompt_input": "3140001300304020",
+      "generations": "3140231312314123",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3214402004000001",
+      "prompt_input": "3214402004000001",
+      "generations": "3214432114422321",
+      "ground_truth": "3214412314322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0032000102140420",
+      "prompt_input": "0032000102140420",
+      "generations": "4132112142141421",
+      "ground_truth": "4132234132141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100002102030012",
+      "prompt_input": "2100002102030012",
+      "generations": "2132132122132212",
+      "ground_truth": "2134342112434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0024203100400203",
+      "prompt_input": "0024203100400203",
+      "generations": "1324243132424243",
+      "ground_truth": "3124243113424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000432012000410",
+      "prompt_input": "2000432012000410",
+      "generations": "2112432412412412",
+      "ground_truth": "2143432112343412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4003100231200400",
+      "prompt_input": "4003100231200400",
+      "generations": "4123121231231431",
+      "ground_truth": "4213134231242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040030032041402",
+      "prompt_input": "0040030032041402",
+      "generations": "2141431232141432",
+      "ground_truth": "2143432132141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0300023030402403",
+      "prompt_input": "0300023030402403",
+      "generations": "4304023030402413",
+      "ground_truth": "1324423131422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4031002400030042",
+      "prompt_input": "4031002400030042",
+      "generations": "4231442424231242",
+      "ground_truth": "4231312424131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002203003211200",
+      "prompt_input": "0002203003211200",
+      "generations": "2112213213211232",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4200104200010024",
+      "prompt_input": "4200104200010024",
+      "generations": "4200124240010424",
+      "ground_truth": "4213134224313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2304000332410000",
+      "prompt_input": "2304000332410000",
+      "generations": "2324100332412033",
+      "ground_truth": "2314412332411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3104000002434300",
+      "prompt_input": "3104000002434300",
+      "generations": "3124043002434310",
+      "ground_truth": "3124243112434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1420020001300301",
+      "prompt_input": "1420020001300301",
+      "generations": "1420321001310301",
+      "ground_truth": "1423321441322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0013010024011020",
+      "prompt_input": "0013010024011020",
+      "generations": "1013011024011024",
+      "ground_truth": "4213314224311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100234000141400",
+      "prompt_input": "0100234000141400",
+      "generations": "0140234000141400",
+      "ground_truth": "4132234132141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040341203010004",
+      "prompt_input": "0040341203010004",
+      "generations": "1141341243412434",
+      "ground_truth": "1243341243212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020231031020200",
+      "prompt_input": "0020231031020200",
+      "generations": "1121231231223231",
+      "ground_truth": "1423231431424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002001012344000",
+      "prompt_input": "3002001012344000",
+      "generations": "3442321012344232",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4320004330100004",
+      "prompt_input": "4320004330100004",
+      "generations": "4324014332144034",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0002321003400420",
+      "prompt_input": "0002321003400420",
+      "generations": "2142321423422423",
+      "ground_truth": "4132321423411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4003134034000030",
+      "prompt_input": "4003134034000030",
+      "generations": "4323134134313134",
+      "ground_truth": "4213134234212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0043400130020130",
+      "prompt_input": "0043400130020130",
+      "generations": "0143420130020130",
+      "ground_truth": "1243432134122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3010014002304001",
+      "prompt_input": "3010014002304001",
+      "generations": "3013314112314311",
+      "ground_truth": "3412214312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030132031004003",
+      "prompt_input": "0030132031004003",
+      "generations": "1131132131324113",
+      "ground_truth": "2431132431424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104002003121200",
+      "prompt_input": "0104002003121200",
+      "generations": "2124112113121211",
+      "ground_truth": "2134342143121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400013010404020",
+      "prompt_input": "3400013010404020",
+      "generations": "3414013213414123",
+      "ground_truth": "3412213412434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4120004104320000",
+      "prompt_input": "4120004104320000",
+      "generations": "4124304124320144",
+      "ground_truth": "4123324114322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3201000241000014",
+      "prompt_input": "3201000241000014",
+      "generations": "3241013241302414",
+      "ground_truth": "3241143241232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104000214003041",
+      "prompt_input": "0104000214003041",
+      "generations": "4114111214113141",
+      "ground_truth": "2134431214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400030032044023",
+      "prompt_input": "0400030032044023",
+      "generations": "3432232432344323",
+      "ground_truth": "2431134232144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0302201030204030",
+      "prompt_input": "0302201030204030",
+      "generations": "1332241332224133",
+      "ground_truth": "1342241331244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010120401030021",
+      "prompt_input": "0010120401030021",
+      "generations": "1212123421234121",
+      "ground_truth": "4312123421433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3020200013020210",
+      "prompt_input": "3020200013020210",
+      "generations": "3020200013020210",
+      "ground_truth": "3124243113424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2401030001003210",
+      "prompt_input": "2401030001003210",
+      "generations": "2421232221133211",
+      "ground_truth": "2431134241233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0032230032000023",
+      "prompt_input": "0032230032000023",
+      "generations": "2232232232333323",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0204340020004320",
+      "prompt_input": "0204340020004320",
+      "generations": "3234343323434321",
+      "ground_truth": "1234341221434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030314202130000",
+      "prompt_input": "0030314202130000",
+      "generations": "2131314212131321",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100401230211000",
+      "prompt_input": "0100401230211000",
+      "generations": "1113411231211211",
+      "ground_truth": "2143431234211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2100302000434010",
+      "prompt_input": "2100302000434010",
+      "generations": "2104342100434010",
+      "ground_truth": "2134342112434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200301001032340",
+      "prompt_input": "0200301001032340",
+      "generations": "1232321221232341",
+      "ground_truth": "1234341241232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0030320410030340",
+      "prompt_input": "0030320410030340",
+      "generations": "4134320410032341",
+      "ground_truth": "4132321414232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0310010004300241",
+      "prompt_input": "0310010004300241",
+      "generations": "4312412004300241",
+      "ground_truth": "2314412314323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0402004001300321",
+      "prompt_input": "0402004001300321",
+      "generations": "1432114321344321",
+      "ground_truth": "3412124321344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1400004120044003",
+      "prompt_input": "1400004120044003",
+      "generations": "1412344123144123",
+      "ground_truth": "1432324123144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0300400232410003",
+      "prompt_input": "0300400232410003",
+      "generations": "2302410232410023",
+      "ground_truth": "2314413232411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4003000004212130",
+      "prompt_input": "4003000004212130",
+      "generations": "4203200034212130",
+      "ground_truth": "4213134234212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000004103041032",
+      "prompt_input": "4000004103041032",
+      "generations": "4113324123241432",
+      "ground_truth": "4123324123141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0413004001004230",
+      "prompt_input": "0413004001004230",
+      "generations": "0413004201004231",
+      "ground_truth": "2413134231244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0412024340000004",
+      "prompt_input": "0412024340000004",
+      "generations": "3412124341412424",
+      "ground_truth": "3412124343212134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0143001210300020",
+      "prompt_input": "0143001210300020",
+      "generations": "2143001214300121",
+      "ground_truth": "2143431212343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4200010420001430",
+      "prompt_input": "4200010420001430",
+      "generations": "4200011420001432",
+      "ground_truth": "4213312423411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2103000100120230",
+      "prompt_input": "2103000100120230",
+      "generations": "2123122123121231",
+      "ground_truth": "2143432134121234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4030320003041003",
+      "prompt_input": "4030320003041003",
+      "generations": "4133324033041403",
+      "ground_truth": "4132324123141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0124001300400031",
+      "prompt_input": "0124001300400031",
+      "generations": "3124001312400131",
+      "ground_truth": "3124241313424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4301203000030402",
+      "prompt_input": "4301203000030402",
+      "generations": "4321243112231412",
+      "ground_truth": "4321213412433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3042040010044001",
+      "prompt_input": "3042040010044001",
+      "generations": "3042041014244201",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0130430000230201",
+      "prompt_input": "0130430000230201",
+      "generations": "2131431111231231",
+      "ground_truth": "2134431214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3004041010420200",
+      "prompt_input": "3004041010420200",
+      "generations": "3134241413424241",
+      "ground_truth": "3124241313424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0213004200001024",
+      "prompt_input": "0213004200001024",
+      "generations": "4213214211221324",
+      "ground_truth": "4213314224311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1423030440300000",
+      "prompt_input": "1423030440300000",
+      "generations": "1423432441324414",
+      "ground_truth": "1423231441323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040410024130004",
+      "prompt_input": "0040410024130004",
+      "generations": "1242413124132424",
+      "ground_truth": "3241413224131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3200000223011400",
+      "prompt_input": "3200000223011400",
+      "generations": "3211410223211420",
+      "ground_truth": "3214413223411423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0120240100030042",
+      "prompt_input": "0120240100030042",
+      "generations": "3124243124431242",
+      "ground_truth": "3124243142131342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0104030102030402",
+      "prompt_input": "0104030102030402",
+      "generations": "0124030102030402",
+      "ground_truth": "2134432112433412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0413130000003041",
+      "prompt_input": "0413130000003041",
+      "generations": "1413131111413141",
+      "ground_truth": "2413132441323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040402310000214",
+      "prompt_input": "0040402310000214",
+      "generations": "2140432310020214",
+      "ground_truth": "2341412314323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0120000012340402",
+      "prompt_input": "0120000012340402",
+      "generations": "4123442412340412",
+      "ground_truth": "4123234112343412"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000304014022304",
+      "prompt_input": "0000304014022304",
+      "generations": "4222314314322314",
+      "ground_truth": "4123324114322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0432301400000301",
+      "prompt_input": "0432301400000301",
+      "generations": "1432311432432321",
+      "ground_truth": "1432321421434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0203401200003024",
+      "prompt_input": "0203401200003024",
+      "generations": "1243431232223124",
+      "ground_truth": "1243431224313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0140040043001204",
+      "prompt_input": "0140040043001204",
+      "generations": "0140040143001204",
+      "ground_truth": "3142241343211234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0140201002300021",
+      "prompt_input": "0140201002300021",
+      "generations": "2141201402314121",
+      "ground_truth": "3142241312344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0130004100130320",
+      "prompt_input": "0130004100130320",
+      "generations": "0131324100131324",
+      "ground_truth": "4132324124131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1000230102040103",
+      "prompt_input": "1000230102040103",
+      "generations": "1231234112341123",
+      "ground_truth": "1432234132144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0124040010030302",
+      "prompt_input": "0124040010030302",
+      "generations": "3124343210434312",
+      "ground_truth": "3124243112434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4002300103100420",
+      "prompt_input": "4002300103100420",
+      "generations": "4212342123121421",
+      "ground_truth": "4132324123141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3004001003420031",
+      "prompt_input": "3004001003420031",
+      "generations": "3424331003424331",
+      "ground_truth": "3124241313424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3204000320404002",
+      "prompt_input": "3204000320404002",
+      "generations": "3214244321424332",
+      "ground_truth": "3214142323414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3041003023000103",
+      "prompt_input": "3041003023000103",
+      "generations": "3141123123143123",
+      "ground_truth": "3241143223144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0231000230002013",
+      "prompt_input": "0231000230002013",
+      "generations": "0231300230002313",
+      "ground_truth": "4231134231242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1030201000014103",
+      "prompt_input": "1030201000014103",
+      "generations": "1431201032014103",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000013402430320",
+      "prompt_input": "0000013402430320",
+      "generations": "1330013432431321",
+      "ground_truth": "3412213412434321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2003030441003200",
+      "prompt_input": "2003030441003200",
+      "generations": "2113232441323244",
+      "ground_truth": "2413132441323241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100301010022340",
+      "prompt_input": "0100301010022340",
+      "generations": "1122341213122341",
+      "ground_truth": "4123321414322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0412020441000001",
+      "prompt_input": "0412020441000001",
+      "generations": "4412123441222441",
+      "ground_truth": "3412123441232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0410314200004020",
+      "prompt_input": "0410314200004020",
+      "generations": "1412314211314321",
+      "ground_truth": "2413314212344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4310214000040020",
+      "prompt_input": "4310214000040020",
+      "generations": "4313214312143121",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3400010400201240",
+      "prompt_input": "3400010400201240",
+      "generations": "3410012400211240",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020240030020213",
+      "prompt_input": "0020240030020213",
+      "generations": "2321241132124213",
+      "ground_truth": "1324243131424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020003412034002",
+      "prompt_input": "0020003412034002",
+      "generations": "4121223412234122",
+      "ground_truth": "3421213412434312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2431130000003200",
+      "prompt_input": "2431130000003200",
+      "generations": "2431130000043241",
+      "ground_truth": "2431134241233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4300214030001400",
+      "prompt_input": "4300214030001400",
+      "generations": "4300214430021443",
+      "ground_truth": "4321214332141432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002021024300300",
+      "prompt_input": "3002021024300300",
+      "generations": "3002321324312322",
+      "ground_truth": "3142421324311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4100034010020210",
+      "prompt_input": "4100034010020210",
+      "generations": "4100234110023211",
+      "ground_truth": "4123234114323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0314003200030240",
+      "prompt_input": "0314003200030240",
+      "generations": "0314003204033240",
+      "ground_truth": "2314413214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0214000320000342",
+      "prompt_input": "0214000320000342",
+      "generations": "3214203321400342",
+      "ground_truth": "3214412324311342"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2014040002300140",
+      "prompt_input": "2014040002300140",
+      "generations": "2014141012300142",
+      "ground_truth": "2314142342313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0300012300020234",
+      "prompt_input": "0300012300020234",
+      "generations": "0340012340120234",
+      "ground_truth": "2341412334121234"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0403324100100100",
+      "prompt_input": "0403324100100100",
+      "generations": "2413324132124132",
+      "ground_truth": "1423324143122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100230100203210",
+      "prompt_input": "0100230100203210",
+      "generations": "2113232110233211",
+      "ground_truth": "4132234114233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002240000004231",
+      "prompt_input": "3002240000004231",
+      "generations": "3142241300324231",
+      "ground_truth": "3142241313244231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040430000343021",
+      "prompt_input": "0040430000343021",
+      "generations": "2043432112343421",
+      "ground_truth": "2143431212343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0003030432400130",
+      "prompt_input": "0003030432400130",
+      "generations": "0403032432400132",
+      "ground_truth": "1423231432414132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020103431000013",
+      "prompt_input": "0020103431000013",
+      "generations": "1123133431334313",
+      "ground_truth": "4321123431422413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3204000010230301",
+      "prompt_input": "3204000010230301",
+      "generations": "3234123213234321",
+      "ground_truth": "3214413214232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0304243100400200",
+      "prompt_input": "0304243100400200",
+      "generations": "2314243142424243",
+      "ground_truth": "1324243131424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0124001303002001",
+      "prompt_input": "0124001303002001",
+      "generations": "0124001323012001",
+      "ground_truth": "3124421313422431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000140200230304",
+      "prompt_input": "3000140200230304",
+      "generations": "3143143204234314",
+      "ground_truth": "3241143241232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3000140200230301",
+      "prompt_input": "3000140200230301",
+      "generations": "3210143201230321",
+      "ground_truth": "3214143241232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0402204100103100",
+      "prompt_input": "0402204100103100",
+      "generations": "1412214123123142",
+      "ground_truth": "1432234142133124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3012103400002003",
+      "prompt_input": "3012103400002003",
+      "generations": "3412123413412123",
+      "ground_truth": "3412123443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2143002100040002",
+      "prompt_input": "2143002100040002",
+      "generations": "2143002102144002",
+      "ground_truth": "2143342112344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3402020003200103",
+      "prompt_input": "3402020003200103",
+      "generations": "3432321143242123",
+      "ground_truth": "3412123443212143"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002200000311024",
+      "prompt_input": "3002200000311024",
+      "generations": "3112240002311224",
+      "ground_truth": "3142241342311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0014400004020341",
+      "prompt_input": "0014400004020341",
+      "generations": "3214412314121341",
+      "ground_truth": "3214412314322341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0020020324300102",
+      "prompt_input": "0020020324300102",
+      "generations": "1324024324302132",
+      "ground_truth": "1324421324313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400023440232000",
+      "prompt_input": "0400023440232000",
+      "generations": "3432323443232343",
+      "ground_truth": "3412123441232341"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3002001324001004",
+      "prompt_input": "3002001324001004",
+      "generations": "3242001324201324",
+      "ground_truth": "3142421324311324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1420024040000310",
+      "prompt_input": "1420024040000310",
+      "generations": "1420024042001310",
+      "ground_truth": "1423324141322314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0000401031002431",
+      "prompt_input": "0000401031002431",
+      "generations": "1000431431002431",
+      "ground_truth": "1342421331242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200000034122130",
+      "prompt_input": "0200000034122130",
+      "generations": "1211322134122134",
+      "ground_truth": "1243432134122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0200300210232004",
+      "prompt_input": "0200300210232004",
+      "generations": "3232324213232324",
+      "ground_truth": "4231314214232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0010002331400031",
+      "prompt_input": "0010002331400031",
+      "generations": "3314002331400331",
+      "ground_truth": "2314142331424231"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0240003040232300",
+      "prompt_input": "0240003040232300",
+      "generations": "3243223243232342",
+      "ground_truth": "3241143241232314"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4013310000411000",
+      "prompt_input": "4013310000411000",
+      "generations": "4113310010411331",
+      "ground_truth": "4213312423411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3041040200140003",
+      "prompt_input": "3041040200140003",
+      "generations": "3141143234141113",
+      "ground_truth": "3241143223144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3410210400010200",
+      "prompt_input": "3410210400010200",
+      "generations": "3413213413213213",
+      "ground_truth": "3412213443211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1302043041000004",
+      "prompt_input": "1302043041000004",
+      "generations": "1312143241312114",
+      "ground_truth": "1342243141233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0310003200033240",
+      "prompt_input": "0310003200033240",
+      "generations": "3310033240033240",
+      "ground_truth": "2314413214233241"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2000030212033001",
+      "prompt_input": "2000030212033001",
+      "generations": "2122331212133221",
+      "ground_truth": "2134431212433421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4031300013200400",
+      "prompt_input": "4031300013200400",
+      "generations": "4231324313241413",
+      "ground_truth": "4231314213242413"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4302004330202000",
+      "prompt_input": "4302004330202000",
+      "generations": "4332224332242433",
+      "ground_truth": "4312124331242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0130041243000003",
+      "prompt_input": "0130041243000003",
+      "generations": "0133341243000113",
+      "ground_truth": "2134341243211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0041403030101020",
+      "prompt_input": "0041403030101020",
+      "generations": "2141423232101423",
+      "ground_truth": "2341413232141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4312000010300420",
+      "prompt_input": "4312000010300420",
+      "generations": "4312020012312420",
+      "ground_truth": "4312214312343421"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1023000002044130",
+      "prompt_input": "1023000002044130",
+      "generations": "1323011002344132",
+      "ground_truth": "1423234132144132"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 3001210010404010",
+      "prompt_input": "3001210010404010",
+      "generations": "3011213011414011",
+      "ground_truth": "3421213413424213"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0040041021004320",
+      "prompt_input": "0040041021004320",
+      "generations": "2243241221414324",
+      "ground_truth": "1243341221344321"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0304103202010020",
+      "prompt_input": "0304103202010020",
+      "generations": "2324123242412324",
+      "ground_truth": "2314143232414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0043042101300300",
+      "prompt_input": "0043042101300300",
+      "generations": "1143142131344321",
+      "ground_truth": "1243342121344312"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4001310220001020",
+      "prompt_input": "4001310220001020",
+      "generations": "4201311224201322",
+      "ground_truth": "4231314224131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320201000310042",
+      "prompt_input": "0320201000310042",
+      "generations": "1324231322313242",
+      "ground_truth": "1324241342313142"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1002031030004023",
+      "prompt_input": "1002031030004023",
+      "generations": "1422331232114123",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0400231030400120",
+      "prompt_input": "0400231030400120",
+      "generations": "2401231232400123",
+      "ground_truth": "1432231432414123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320120304100030",
+      "prompt_input": "0320120304100030",
+      "generations": "1324121304122030",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1400000141300014",
+      "prompt_input": "1400000141300014",
+      "generations": "1412000141300014",
+      "ground_truth": "1423234141323214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4000300423401400",
+      "prompt_input": "4000300423401400",
+      "generations": "4214311423421423",
+      "ground_truth": "4123321423411432"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2001403002001420",
+      "prompt_input": "2001403002001420",
+      "generations": "2301423102001423",
+      "ground_truth": "2341413232141423"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2030042043101000",
+      "prompt_input": "2030042043101000",
+      "generations": "2431242443131242",
+      "ground_truth": "2134342143121243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0100401300002431",
+      "prompt_input": "0100401300002431",
+      "generations": "3132431311112431",
+      "ground_truth": "3142421313242431"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0341043230000020",
+      "prompt_input": "0341043230000020",
+      "generations": "2341243234133323",
+      "ground_truth": "2341143232144123"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0401300200101304",
+      "prompt_input": "0401300200101304",
+      "generations": "2421311243131314",
+      "ground_truth": "2431314242131324"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0302040002010124",
+      "prompt_input": "0302040002010124",
+      "generations": "1312441112413124",
+      "ground_truth": "1342241342313124"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 0320024000120034",
+      "prompt_input": "0320024000120034",
+      "generations": "0320024300120034",
+      "ground_truth": "4321124334122134"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 2004003004201043",
+      "prompt_input": "2004003004201043",
+      "generations": "2114323004231043",
+      "ground_truth": "2314413234211243"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 1032030041003004",
+      "prompt_input": "1032030041003004",
+      "generations": "1032033041043204",
+      "ground_truth": "1432234141233214"
+    },
+    {
+      "question": "Solve the following Sudoku puzzle: 4103020403002030",
+      "prompt_input": "4103020403002030",
+      "generations": "4123123413042432",
+      "ground_truth": "4123321413422431"
+    }
+  ],
+  "metrics": {
+    "wall_time": 0.0,
+    "total_processed": 500,
+    "exact_match_acc": 0.0,
+    "empty_cell_acc": 0.29675
+  },
+  "model_path": "GSAI-ML/LLaDA-8B-Base",
+  "checkpoint_path": "",
+  "policy_checkpoint_path": "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best_GSAI-ML_LLaDA-8B-Base.pt",
+  "gen_length": 16,
+  "diffusion_steps": 2,
+  "block_length": 16
+}

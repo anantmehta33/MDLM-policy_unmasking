@@ -2,41 +2,38 @@
 
 ##NECESSARY JOB SPECIFICATIONS
 #SBATCH --job-name=run_eval
-#SBATCH --time=2:00:00                     
-#SBATCH --ntasks=4                         
-#SBATCH --ntasks-per-node=4                   
+#SBATCH --time=6:00:00                     
+#SBATCH --ntasks=8                         
+#SBATCH --ntasks-per-node=2                   
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=120G                             
-#SBATCH --output=/work/nvme/bdgk/anant/d1/policy_training/anant_logs/logs/%x_%j.log  
-#SBATCH --gres=gpu:4
-#SBATCH --partition=ghx4
-#SBATCH --account=bdgk-dtai-gh
+#SBATCH --output=/scratch/user/ajayjagan2511/d1/policy_training/anant_logs/logs/%x_%j.log  
+#SBATCH --gres=gpu:a100:2
 
 set -euo pipefail
-# module purge
-# module load WebProxy
-# module load CUDA/12.4.0
-# module load GCC/11.3.0
-# export http_proxy=http://10.73.132.63:8080
-# export https_proxy=http://10.73.132.63:8080
+module purge
+module load WebProxy
+module load CUDA/12.4.0
+module load GCC/11.3.0
+export http_proxy=http://10.73.132.63:8080
+export https_proxy=http://10.73.132.63:8080
 
 # Activate your env before launch if your cluster requires it.
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate d1
+source /scratch/user/ajayjagan2511/miniconda3/etc/profile.d/conda.sh
+conda activate /scratch/user/ajayjagan2511/miniconda3/envs/d1
 
 # In SLURM, BASH_SOURCE[0] may point to a temporary copy under /var/spool,
 # so do not derive repo paths from script location.
-REPO_ROOT="${REPO_ROOT:-/work/nvme/bdgk/anant/d1}"
+REPO_ROOT="${REPO_ROOT:-/scratch/user/ajayjagan2511/d1}"
 WORKDIR="${REPO_ROOT}/policy_training"
 ACCEL_CONFIG="${REPO_ROOT}/diffu-grpo/accelerate.yaml"
 
 TRAIN_CSV="${REPO_ROOT}/dataset/4x4_train_sudoku.csv"
-#MODEL_NAME="GSAI-ML/LLaDA-8B-Base"
 MODEL_NAME="GSAI-ML/LLaDA-1.5"
 
 # Configurable reverse steps for both training and policy-guided inference.
 REVERSE_STEPS=16
-EPOCHS=200
+EPOCHS=100
 BATCH_SIZE=8
 LR=3e-4
 NUM_WORKERS=8

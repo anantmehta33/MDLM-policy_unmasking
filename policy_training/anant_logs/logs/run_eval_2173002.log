@@ -1,7 +1,0 @@
-LOGDIR=/work/nvme/bdgk/anant/d1/policy_training/slurm/2173002
-WORKDIR=/work/nvme/bdgk/anant/d1/policy_training
-ACCEL_CONFIG=/work/nvme/bdgk/anant/d1/diffu-grpo/accelerate.yaml
-NUM_GPUS=4
-PYTHON=/u/amehta4/miniconda3/envs/d1/bin/python
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-[2026-04-21T19:42:58.695] error: *** JOB 2173002 ON gh140 CANCELLED AT 2026-04-21T19:42:58 DUE to SIGNAL Terminated ***

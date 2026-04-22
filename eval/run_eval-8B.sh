@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ##NECESSARY JOB SPECIFICATIONS
 #SBATCH --job-name=run_eval
 #SBATCH --time=1:00:00                     
@@ -7,24 +6,22 @@
 #SBATCH --ntasks-per-node=1                   
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=120G                             
-#SBATCH --output=/work/nvme/bdgk/anant/d1/eval/anant_logs/logs/%x_%j.log  
-#SBATCH --gres=gpu:4
-#SBATCH --partition=ghx4-interactive
-#SBATCH --account=bdgk-dtai-gh
+#SBATCH --output=/scratch/user/ajayjagan2511/d1/eval/anant_logs/logs/%x_%j.log  
+#SBATCH --gres=gpu:1
 
 set -euo pipefail
 
-# module purge
-# module load WebProxy
-# module load CUDA/12.4.0
-# module load GCC/11.3.0
-# export http_proxy=http://10.73.132.63:8080
-# export https_proxy=http://10.73.132.63:8080
+module purge
+module load WebProxy
+module load CUDA/12.4.0
+module load GCC/11.3.0
+export http_proxy=http://10.73.132.63:8080
+export https_proxy=http://10.73.132.63:8080
 
 # Activate your env before launch if your cluster requires it.
 # Non-interactive shells (SLURM) do not load conda init hooks automatically.
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate d1
+source /scratch/user/ajayjagan2511/miniconda3/etc/profile.d/conda.sh
+conda activate /scratch/user/ajayjagan2511/miniconda3/envs/d1
 
 # Hardcoded evaluation config for SLURM runs.
 # Update these paths/values directly in this file before submission.
@@ -32,12 +29,12 @@ EVAL_MODE="policy"  # options: policy, base_low_confidence
 
 # Policy sweep config used only when EVAL_MODE=policy.
 POLICY_CKPTS=(
-  "/work/nvme/bdgk/anant/d1/policy_training/checkpoints/sudoku_policy_rs16_bs8/policy_best_GSAI-ML_LLaDA-8B-Base.pt"
+  "/scratch/user/ajayjagan2511/d1/policy_training/checkpoints/sudoku_policy_rs4_bs8-8B/policy_best_GSAI-ML_LLaDA-8B-Base.pt"
 )
 DIFFUSION_STEPS=(2 4 8)
 
 # Used only in policy mode. Base mode uses eval/sudoku.py default test set (4x4_test_sudoku.csv).
-SUDOKU_CSV="/work/nvme/bdgk/anant/d1/dataset/4x4_test_sudoku.csv"
+SUDOKU_CSV="/scratch/user/ajayjagan2511/d1/dataset/4x4_test_sudoku.csv"
 GPU_ID="0"
 
 # if [ "$EVAL_MODE" = "policy" ]; then
